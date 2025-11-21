@@ -1,0 +1,101 @@
+$white: #ffffff;
+$grey1: #f8f8f8;
+$grey2: #878ca0;
+$grey3: #eaebf4;
+$grey4: #7c7c86;
+$grey5: #707070;
+$black: #000000;
+$black1: #1f1b1b;
+$primary: #e82100;
+$color2: #ff9000;
+$color3: #fcf92d;
+$color4: #0064bf;
+$color5: #171c60;
+$color6: #806749;
+$color7: #149fed;
+$color8: #109ae9;
+// color
+.color-primary {
+    color: $primary !important;
+}
+
+.color-white {
+    color: $white;
+}
+
+.color-black {
+    color: $black !important;
+}
+
+.color-black1 {
+    color: $black1;
+}
+
+.color2 {
+    color: $color2;
+}
+
+.color3 {
+    color: $color3;
+}
+
+.color4 {
+    color: $color4;
+}
+
+.color5 {
+    color: $color5;
+}
+
+.color6 {
+    color: $color6;
+}
+
+.color7 {
+    color: $color7;
+}
+
+// background
+.bg-color1 {
+    background: $primary !important;
+}
+
+.bg-white {
+    background: $white;
+}
+
+.bg-black {
+    background: $black;
+}
+
+.bg-black1 {
+    background: $black1;
+}
+
+.bg-color2 {
+    background: $color2;
+}
+
+.bg-color3 {
+    background: $color3;
+}
+
+.bg-color4 {
+    background: $color4;
+}
+
+.bg-color5 {
+    background: $color5;
+}
+
+.bg-color6 {
+    background: $color6;
+}
+
+.bg-color7 {
+    background: $color7;
+}
+
+.bg-color8 {
+    background: $color8;
+}

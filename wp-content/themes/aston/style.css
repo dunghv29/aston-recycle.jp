@@ -1,0 +1,58 @@
+@charset "UTF-8";
+/*!
+Theme Name: Aston・リサイクル・サービス
+Theme URI: https://aston.co.jp/
+Author: 株式会社アストン
+Author URI: https://aston.co.jp/
+Description: アストン専用WordPressテーマ - プロフェッショナルなリサイクル・中古品買取サービス会社向け。レスポンシブデザイン、サービス紹介セクション、お問い合わせフォーム統合、リサイクル・リユース業界に最適化されたモダンな日本企業向けレイアウト。
+Version: 1.0.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: aston
+Tags: business, recycling, services, responsive, japanese, corporate, e-commerce, contact-form, custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+このテーマは、WordPressと同様にGPLライセンスの下で提供されています。
+このテーマを使って素晴らしいものを作り、楽しんで、学んだことを共有してください。
+
+aston は Underscores https://underscores.me/ をベースにしています。(C) 2012-2020 Automattic, Inc.
+Underscores は GNU GPL v2 またはそれ以降のバージョンの条件の下で配布されています。
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
+*/
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Generic
+	- Normalize
+	- Box sizing
+# Base
+	- Typography
+	- Elements
+	- Links
+	- Forms
+## Layouts
+# Components
+	- Navigation
+	- Posts and pages
+	- Comments
+	- Widgets
+	- Media
+	- Captions
+	- Galleries
+# plugins
+	- Jetpack infinite scroll
+# Utilities
+	- Accessibility
+	- Alignments
+
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Generic
+--------------------------------------------------------------*/
+/* Normalize
+--------------------------------------------- */
+@import './assets/fonts/phosphor-icons/regular/style.css';
+@import './assets/css/style.css?v=1.0.0';/*# sourceMappingURL=style.css.map */

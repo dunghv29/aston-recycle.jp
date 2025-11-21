@@ -1,0 +1,228 @@
+.search {
+    box-shadow: 0 3px 6px #00000016;
+}
+
+.formSearch-sub {
+    border-radius: 6px;
+    color: #222222;
+    display: flex;
+    height: 63px;
+    position: relative;
+    width: 100%;
+    background-color: #ffffff;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+    padding: 3px;
+    @extend .search;
+}
+
+.searchBar {
+    display: flex;
+    -webkit-flex: 1 1 0%;
+    -ms-flex: 1 1 0%;
+    flex: 1 1 0%;
+    height: 100%;
+    min-width: 0px;
+}
+
+.search_cl1 {
+    -webkit-flex: 1 0 0%;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+    min-width: 0px;
+    margin-right: 10px;
+}
+
+@media (min-width: 992px) {
+    .search_cl1 {
+        -webkit-flex: 1.5 0 0%;
+        -ms-flex: 1.5 0 0%;
+        flex: 1.5 0 0%;
+    }
+}
+
+.border-vertical {
+    align-self: center;
+    border-right: 1px solid #dddddd;
+    -webkit-flex: 0 0 0px;
+    -ms-flex: 0 0 0px;
+    flex: 0 0 0px;
+    height: 30px;
+}
+
+.search_cl2 {
+    display: flex;
+    -webkit-flex: 2 0 0%;
+    -ms-flex: 2 0 0%;
+    flex: 2 0 0%;
+    min-width: 0px;
+    position: relative;
+    @media (max-width: 768px) {
+        display: block;
+    }
+}
+
+.search_cl3 {
+    -webkit-flex: 1 0 0%;
+    -ms-flex: 1 0 0%;
+    flex: 1 0 0%;
+    margin: -1px;
+    min-width: 0px;
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.ctm-buttom {
+    cursor: pointer;
+    margin: 0px;
+    outline: none;
+    padding: 1px;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    background: transparent;
+    text-align: left;
+}
+
+.box-buttom {
+    padding: 0px 21px;
+    overflow: hidden;
+    position: relative;
+    white-space: nowrap;
+    width: 100%;
+    z-index: 1;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.searchButton {
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+    height: 100%;
+    text-align: right;
+    margin-left: 20px;
+}
+
+.buttonTag {
+    background: transparent;
+    border: 0px;
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 5px;
+    height: 100%;
+    position: relative;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    min-width: 120px;
+    background-image: linear-gradient($yellow2, $yellow3);
+    font-size: 16px;
+    min-height: 36px;
+    transition: transform 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    &:hover {
+        background-image: linear-gradient($yellow3, $yellow2);
+    }
+}
+
+.buttonTag-box {
+    display: inline-flex;
+    padding: 0 16px;
+    position: relative;
+    z-index: 1;
+}
+
+@media only screen and (max-width: 992px) {
+    .formSearch-sub {
+        display: block;
+        height: auto;
+    }
+    .searchBar {
+        display: block;
+    }
+    .border-vertical {
+        display: none;
+    }
+    .box-buttom {
+        height: 45px;
+        border: 1px solid $grey2;
+    }
+    .search_cl1 .box-buttom {
+        border: none;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .search_cl2 {
+        display: block;
+    }
+}
+
+.cursor {
+    cursor: pointer;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.focus-input:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.iconFind {
+    background-color: transparent !important;
+}
+
+.ellipsis {
+    text-overflow: ellipsis;
+}
+
+.search_i {
+    color: black;
+    &::placeholder {
+        font-style: italic;
+    }
+}
+
+.form-control {
+    color: black;
+}
+
+@media (max-width: 992px) {
+    .search-general {
+        border: 1px solid $grey2;
+        border-radius: 5px;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        margin: 0 0 10px;
+        height: 36px;
+        padding: 0 10px;
+    }
+    .formSearch-sub {
+        padding: 10px;
+    }
+    .search_cl1 .input-group-text {
+        padding: 0 5px 0 0;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .search_cl2 {
+        display: flex;
+        justify-content: space-between;
+        .search_cl3 {
+            width: 49%;
+            flex: unset;
+        }
+    }
+}

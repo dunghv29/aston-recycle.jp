@@ -1,0 +1,87 @@
+button {
+    outline: none;
+    box-shadow: none;
+    &:active,
+    &:hover {
+        outline: none !important;
+        box-shadow: none !important;
+    }
+    &:focus {
+        border: none !important;
+        outline: none !important;
+        box-shadow: none !important;
+    }
+}
+
+%btn {
+    display: inline-block;
+    color: white;
+    border-radius: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    &:focus {
+        outline: 0;
+        box-shadow: none;
+    }
+}
+
+.btn-general {
+    @extend %btn;
+    background: $primary;
+    position: relative;
+    box-shadow: 0 4px 4px #e6220080;
+    transition: all 0.3s;
+    &:hover {
+        box-shadow: none;
+        color: white;
+    }
+    &::before {
+        position: absolute;
+        content: "";
+        display: block;
+        box-shadow: inset 0 4px 4px #ff9000;
+        width: 100%;
+        max-width: 100%;
+        top: 0px;
+        height: 20px;
+        z-index: 888;
+        border-radius: 48px;
+    }
+}
+
+.btn-h62 {
+    min-height: 62px;
+    line-height: 60px;
+    @media (max-width: 575px) {
+        min-height: 42px;
+        line-height: 40px;
+    }
+}
+
+.btn-h65 {
+    min-height: 65px;
+    line-height: 62px;
+}
+
+.btn-h42 {
+    min-height: 42px;
+    line-height: 40px;
+}
+
+.btn-260 {
+    max-width: 260px;
+}
+
+.btn-210 {
+    max-width: 210px;
+}
+
+.btn-357 {
+    max-width: 357px;
+}
+
+.btn-472 {
+    max-width: 472px;
+}

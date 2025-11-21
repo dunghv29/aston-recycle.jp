@@ -1,0 +1,58 @@
+.form-check {
+  position: relative;
+  display: block;
+  transform: translateZ(10px);
+  -webkit-transform: translateZ(10px);
+  -moz-transform: translateZ(10px);
+  -ms-transform: translateZ(10px);
+  -o-transform: translateZ(10px);
+}
+
+.form-check--input {
+  display: none;
+}
+
+.form-check--label {
+  font-weight: 400;
+  line-height: 24px;
+  color: $dark;
+  cursor: pointer;
+  padding-left: 10px;
+}
+
+.form-check--label::before {
+  content: "";
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: $white;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  border: 2px solid;
+}
+
+.form-check--label::after {
+  content: "\f00c";
+  @include rfs(10px);
+  position: absolute;
+  display: block;
+  top: 0;
+  left: 4px;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 700;
+  color: $white;
+}
+
+.form-check input[type="checkbox"]:checked + label::before {
+  background: $primary;
+}
+
+.btn--checkbox {
+  height: 18px;
+  width: 18px;
+  border: none;
+  background: $black;
+}

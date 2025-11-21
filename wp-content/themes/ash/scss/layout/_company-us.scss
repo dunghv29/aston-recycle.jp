@@ -1,0 +1,109 @@
+.inquiries-phone {
+    border: 5px solid $color4;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 60px;
+    @media (max-width: 768px) {
+        margin-bottom: 40px;
+    }
+    &__left {
+        text-align: right;
+        font-size: 24px;
+        font-weight: bold;
+        color: $primary;
+        margin-right: 40px;
+        @media (max-width: 768px) {
+            margin-right: 0;
+        }
+        @media (max-width: 575px) {
+            font-size: 16px;
+        }
+    }
+    &__right {
+        font-size: 24px;
+        font-weight: bold;
+        color: #000000;
+        margin-left: 40px;
+        @media (max-width: 768px) {
+            margin-left: 0;
+        }
+        @media (max-width: 575px) {
+            font-size: 16px;
+        }
+    }
+    &__body {
+        padding: 20px;
+    }
+}
+
+.company-us-title3 {
+    margin-bottom: 50px;
+    @media (max-width: 768px) {
+        margin-bottom: 30px;
+    }
+}
+
+.company-us-star {
+    border: 5px solid $color2;
+    padding: 5px;
+    border-radius: 10px;
+    margin-bottom: 60px;
+    &__content {
+        padding: 30px 0;
+        @media (max-width: 768px) {
+            padding: 30px 10px;
+        }
+        .row {
+            min-height: 150px;
+            @media (max-width: 575px) {
+                min-height: auto;
+            }
+        }
+    }
+    &__text {
+        font-size: 16px;
+        font-weight: bold;
+        color: $color3;
+        @media (max-width: 768px) {
+            margin-top: 60px;
+        }
+    }
+}
+
+.contact-form {
+    margin-bottom: 20px;
+    &__center {
+        @media (max-width: 768px) {
+            text-align: center;
+        }
+    }
+}
+
+.conttact-title {
+    min-height: 65px;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+}
+
+.input-text {
+    height: 100%;
+    width: 100%;
+    border: 2px solid $color2;
+    border-radius: 10px;
+    padding: 20px 10px;
+}
+
+.input-text:focus {
+    outline: none;
+}
+
+.btn-357.btn-h65 {
+    @media (max-width: 768px) {
+        max-width: 262px;
+    }
+}

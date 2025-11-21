@@ -1,0 +1,56 @@
+/*** Siderbar**/
+
+.aside {
+    padding-left: 25px;
+    @media (max-width: 992px) {
+        padding-left: 0;
+    }
+    &__topic-list {
+        >li {
+            padding: 10px 0;
+            &:not(:last-child) {
+                border-bottom: 1px dashed $black2;
+            }
+        }
+    }
+    &__topic-link {
+        color: $black1;
+        display: block;
+    }
+}
+
+.aside-news {
+    &__list {
+        @media (min-width: 768px) and (max-width: 991px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        >li {
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            &:not(:last-child) {
+                border-bottom: 1px dashed $grey4;
+            }
+            @media (min-width: 768px) and (max-width: 991px) {
+                width: 48%;
+            }
+        }
+    }
+    &__item {
+        display: flex;
+    }
+    &__thumb {
+        width: 100px;
+    }
+    &__image {
+        height: 70px;
+    }
+    &__info {
+        width: calc(100% - 100px);
+        padding-left: 12px;
+    }
+    &__info-title {
+        color: $black1;
+    }
+}

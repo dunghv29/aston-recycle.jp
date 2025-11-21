@@ -1,0 +1,155 @@
+.store_introduc {
+    border-bottom: 10px solid #e9e9e9;
+    &.hp-bg-1 {
+        @media (max-width: 768px) {
+            padding-top: 20px !important;
+            margin-top: 0;
+            margin-bottom: 30px;
+        }
+    }
+    &__header {
+        margin-bottom: 100px;
+        @media (max-width: 575px) {
+            max-width: 270px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 70px;
+        }
+    }
+    &__item {
+        border: 5px solid $primary;
+        border-radius: 10px;
+        padding: 10px;
+        position: relative;
+        margin-bottom: 100px;
+        &.sti-brown {
+            @media (max-width: 768px) {
+                margin-bottom: 50px;
+            }
+        }
+    }
+    &__thumb {
+        >img {
+            border-radius: 10px;
+        }
+    }
+    &__info {
+        margin-top: 50px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        @media (max-width: 575px) {
+            margin-top: 20px;
+            .contactStore__info {
+                font-size: 15px;
+            }
+        }
+    }
+    &__view {
+        display: inline-block;
+        color: $primary;
+        font-size: 16px;
+        font-weight: 700;
+        >img {
+            transition: all 0.3s;
+        }
+        &:hover {
+            color: $primary;
+            >img {
+                transform: translateX(-10px);
+                transition: all 0.3s;
+            }
+        }
+    }
+    &__heading-48 {
+        font-size: 48px;
+        font-weight: bold;
+        @media (max-width: 575px) {
+            font-size: 24px;
+        }
+        @media (min-width: 576px) and (max-width: 767px) {
+            font-size: 28px;
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            font-size: 32px;
+        }
+        @media (min-width: 992px) and (max-width: 1199px) {
+            font-size: 38px;
+        }
+    }
+    &__overlay {
+        position: absolute;
+        top: -65px;
+        right: 90px;
+        @media (max-width: 575px) {
+            top: -40px;
+            right: 50%;
+            transform: translateX(50%);
+        }
+    }
+}
+
+body .store_introduc__info-title {
+    @media (max-width: 575px) {
+        justify-content: center !important;
+    }
+}
+
+.sti-brown {
+    border: 5px solid $color6;
+    .contactStore__name {
+        border: 2px solid $color6;
+    }
+    .contactStore__phone {
+        background-image: url(images/uploads/socBrown.png);
+    }
+}
+
+.sti-sub {
+    display: flex;
+    border: 5px solid $color5;
+    border-radius: 10px;
+    @media (max-width: 768px) {
+        display: block;
+    }
+    &__thumb {
+        width: 280px;
+        padding: 5px;
+        @media (max-width: 768px) {
+            width: 100%;
+            margin-bottom: 10px;
+        }
+        >img {
+            border-radius: 5px;
+        }
+    }
+    &__info {
+        margin-left: 25px;
+        @media (max-width: 768px) {
+            margin-left: 10px;
+        }
+        .logoAstonStyle {
+            margin-right: -1px;
+            margin-bottom: 20px;
+            @media (max-width: 575px) {
+                margin-right: -4px;
+            }
+        }
+    }
+    &__info-desc {
+        margin-bottom: 30px;
+        margin-right: 20px;
+        @media (max-width: 575px) {
+            margin-bottom: 10px;
+            margin-right: 10px;
+        }
+    }
+    &__info-view {
+        text-align: right;
+        margin-right: 20px;
+        margin-bottom: 10px;
+        @media (max-width: 575px) {
+            margin-right: 10px;
+            text-align: center;
+        }
+    }
+}

@@ -1,0 +1,35 @@
+.ctm-pagination {
+    display: block;
+    text-align: center;
+    &--mod {
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+}
+
+.ctm-page-item {
+    display: inline-block;
+}
+
+.ctm-page-link {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 50%;
+    border: none !important;
+    color: $black1 !important;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    &:focus {
+        outline: none;
+    }
+}
+
+.ctm-page-item.active .ctm-page-link {
+    background-color: $grey5 !important;
+    color: white !important;
+}

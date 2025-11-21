@@ -1,0 +1,355 @@
+.recruitment {
+  &__banner {
+    margin-bottom: 70px!important;
+
+    @media (max-width: 575px) {
+      margin-bottom: 13px!important;
+    }
+  }
+
+  &__text {
+    @media (max-width: 575px) {
+      margin-bottom: 10px!important;
+    }
+  }
+
+  &__text--red {
+    font-weight: 600;
+    font-size: 16px!important;
+    line-height: 24px;
+    color: $primary;
+  }
+
+  &__content {
+    @media (max-width: 575px) {
+      margin-bottom: 40px!important;
+    }
+  }
+
+  &__thumb {
+    height: 300px;
+
+    @media (max-width: 575px) {
+      margin-bottom: 40px!important;
+    }
+
+    img {
+      border-radius: 10px;
+    }
+  }
+
+  &__item-title {
+    font-weight: 600!important;
+    font-size: 48px!important;
+    line-height: 72px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: 575px) {
+      font-weight: 600!important;
+      font-size: 24px!important;
+      line-height: 36px!important;
+      margin-bottom: 20px!important;
+    }
+
+    span {
+      font-weight: 600!important;
+      font-size: 48px!important;
+
+      @media (max-width: 575px) {
+        font-weight: 600!important;
+        font-size: 24px!important;
+        line-height: 36px!important;
+      }
+    }
+  }
+
+  &__ellipse {
+    width: 14px;
+    height: 14px;
+    margin-right: 15px;
+
+    @media (max-width: 575px) {
+      width: 10px;
+      height: 10px;
+      margin-right: 5px;
+    }
+  }
+
+  &__item {
+    border: 5px solid $color2;
+    border-radius: 10px;
+    padding: 10px;
+    position: relative;
+
+    @media (max-width: 575px) {
+      margin-bottom: 50px!important;
+    }
+  }
+
+  &__item--last {
+    @media (max-width: 575px) {
+      margin-bottom: 0px!important;
+    }
+  }
+
+  &__item-name {
+    border-radius: 10px;
+    border: 2px solid $color2;
+    font-weight: 600;
+    font-size: 24px!important;
+    line-height: 36px!important;
+
+    @media (min-width: 768px) {
+      height: 100%;
+    }
+  }
+
+  &__item-content {
+    border-bottom: 1px solid #CACACA;
+    font-weight: 300;
+    font-size: 16px!important;
+    line-height: 24px!important;
+    flex-basis: 100%;
+
+    @media (max-width: 575px) {
+      padding-top: 10px!important;
+      padding-bottom: 10px!important;
+    }
+  }
+
+  &__item-content--last {
+    border-bottom: none;
+    padding-bottom: 0!important;
+  }
+
+  &__item-wpcontent {
+    @media (min-width: 768px) {
+      height: 100%;
+      display: flex;
+    }
+
+    @media (max-width: 575px) {
+      padding-left: 0!important;
+    }
+  }
+
+  &__list-content {
+    list-style-type: disc;
+  }
+
+  &__list-item {
+    display: list-item;
+    list-style-position: inside;
+
+    @media (max-width: 575px) {
+      margin-bottom: 15px!important;
+    }
+  }
+
+  &__text-note {
+    @media (max-width: 575px) {
+      margin-top: 17px!important;
+      margin-bottom: 40px!important;
+    }
+  }
+
+  &__note {
+    @media (max-width: 575px) {
+      margin: 0 auto!important;
+      text-align: center!important;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  &__img-mobile {
+    display: none;
+    @media (max-width: 767px) {
+      display: block!important;
+    }
+  }
+
+  &__img-pc {
+    @media (max-width: 767px) {
+      display: none!important;
+    }
+  }
+
+  &__feedback {
+    @media (max-width: 575px) {
+      margin-top: 20px!important;
+      margin-bottom: 30px!important;
+    }
+  }
+
+  &__feedback-title {
+    font-weight: bold;
+    font-size: 24px!important;
+    line-height: 36px!important;
+
+
+  }
+
+  &__feedback-title2 {
+    text-align: center;
+    @media (max-width: 575px) {
+      text-align: left!important;
+      margin-top: 22px;
+    }
+  }
+
+  &__form-icon {
+    width: 52px;
+
+    @media (max-width: 575px) {
+      width: 33px;
+    }
+  }
+
+  &__wp-input {
+    padding: 18px 20px;
+    border-radius: 10px;
+    height: 100%;
+
+    @media (max-width: 767px) {
+      height: auto!important;
+    }
+
+    @media (max-width: 575px) {
+      padding: 8px 10px!important;
+      margin-bottom: 10px!important;
+    }
+  }
+
+  &__wp-btn {
+    height: 100%;
+    width: 100%;
+
+    @media (max-width: 767px) {
+      height: auto!important;
+    }
+  }
+
+  &__btn {
+    color: $primary!important;
+    padding: 18px 30px!important;
+    background: #FCF92D!important;
+    box-shadow: 0px 4px 4px rgba(252, 249, 45, 0.5), inset 0px 4px 4px #FF7700;
+    border-radius: 10px!important;
+    font-weight: 600!important;
+    font-size: 24px!important;
+    line-height: 36px!important;
+    width: 100%;
+  }
+
+  &__input {
+    border:none!important;
+    outline: none!important;
+    box-shadow: none!important;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: $black;
+
+    &:focus {
+      border:none!important;
+      outline: none!important;
+      box-shadow: none!important;
+    }
+  }
+
+  &__feedback-contact {
+    font-weight: 300!important;
+    font-size: 16px!important;
+    line-height: 24px!important;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+
+    &:last-child {
+      margin-bottom: 0!important;
+    }
+
+    @media (max-width: 575px) {
+      align-items: flex-start!important;
+    }
+  }
+
+  &__feedback-network {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    @media (max-width: 575px) {
+      justify-content: center;
+    }
+  }
+
+  &__feedback-thumb {
+    width: 96px;
+
+    img {
+      border-radius: 10px;
+    }
+  }
+
+}
+
+.width75 {
+  width: 75px;
+}
+
+.bigTitle-recruitment {
+  @media (max-width: 575px) {
+    margin-top: 18px!important;
+    margin-bottom: 50px!important;
+  }
+}
+
+.bigTitle-recruitment__pc {
+  @media (max-width: 767px) {
+    display: none!important;
+  }
+}
+
+.bigTitle-recruitment__mobile {
+  display: none;
+  @media (max-width: 767px) {
+    display: block!important;
+  }
+}
+
+p.recruitment__item-content {
+  @media (max-width: 575px) {
+    text-align: center!important;
+    justify-content: center;
+  }
+}
+
+ul.recruitment__item-content {
+  @media (max-width: 575px) {
+    padding-left: 70px!important;
+    padding-right: 70px!important;
+  }
+
+  @media (max-width: 375px) {
+    padding-left: 65px!important;
+    padding-right: 30px!important;
+  }
+
+  @media (max-width: 360px) {
+    padding-left: 60px!important;
+    padding-right: 20px!important;
+  }
+
+  @media (max-width: 320px) {
+    padding-left: 30px!important;
+    padding-right: 30px!important;
+  }
+
+  @media (max-width: 280px) {
+    padding-left: 10px!important;
+    padding-right: 10px!important;
+  }
+}

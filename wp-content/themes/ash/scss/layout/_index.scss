@@ -1,0 +1,846 @@
+.banner {
+    margin-bottom: 80px;
+    @media (max-width: 992px) {
+        margin-bottom: 20px !important;
+    }
+}
+
+// start hp-order1
+.hp-order1 {
+    &__list {
+        >li {
+            margin-bottom: 50px;
+            @media (max-width: 992px) {
+                margin-bottom: 70px;
+            }
+        }
+        >li:last-child {
+            @media (max-width: 992px) {
+                margin-bottom: 20px;
+            }
+        }
+    }
+    &__item {
+        border-radius: 10px;
+        background: white;
+        .heading-24 {
+            @media (min-width: 992px) and (max-width: 1199px) {
+                font-size: 18px;
+            }
+            @media (max-width: 374px) {
+                font-size: 18px;
+            }
+        }
+        .fontsize-16 {
+            @media (min-width: 992px) and (max-width: 1199px) {
+                font-size: 14px;
+            }
+            @media (max-width: 374px) {
+                font-size: 14px;
+            }
+        }
+        +a>img {
+            @media (max-width: 480px) {
+                object-fit: cover !important;
+                width: 100%;
+            }
+        }
+    }
+    &__item-bgred {
+        border: 4px solid $primary;
+    }
+    &__item-bgBrown {
+        border: 4px solid $color6;
+    }
+    &__thumb {
+        position: relative;
+        border-radius: 4px;
+        padding: 5px;
+    }
+    &__info {
+        margin-top: -60px;
+        position: relative;
+        padding: 5px 5px 20px 5px;
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px;
+        >* {
+            color: white;
+        }
+    }
+    &__footer-red {
+        background: url(images/uploads/socRed.png) $primary;
+    }
+    &__footer-brown {
+        background: url(images/uploads/socBrown.png) $color6;
+    }
+}
+
+.overTop {
+    position: absolute;
+    top: -60px;
+    right: 8px;
+    @media (max-width: 480px) {
+        top: -50px;
+        width: 98px;
+    }
+}
+
+.viewDetail {
+    text-align: center;
+    display: inline-block;
+}
+
+// end hp-order1
+%before {
+    content: "";
+    display: block;
+    position: absolute;
+}
+
+// start hp-order2
+.hp-order2 {
+    margin-bottom: 50px;
+    &__header-big {
+        margin-bottom: 40px !important;
+        @media (max-width: 768px) {
+            margin-bottom: 65px !important;
+        }
+    }
+    &__header {
+        margin-bottom: 40px;
+        margin-left: 120px;
+    }
+    &__body {
+        border-radius: 10px;
+        border: 5px solid $primary;
+        padding: 10px;
+        background: transparent;
+        position: relative;
+        @media (max-width: 768px) {
+            padding: 10px 0;
+        }
+        .bg-white {
+            @media (max-width: 768px) {
+                padding: 10px 10px 160px 10px;
+            }
+        }
+        &::before {
+            @extend %before;
+            top: -161px;
+            left: 10px;
+            background: url(images/icons/icon-notify.svg) no-repeat;
+            height: 165px;
+            width: 165px;
+            background-size: 165px;
+            @media (max-width: 992px) {
+                top: -70px;
+                height: 70px;
+                width: 70px;
+                background-size: 70px;
+            }
+        }
+        &::after {
+            @extend %before;
+            bottom: -5px;
+            right: -6%;
+            background: url(images/uploads/lovepik.png) no-repeat;
+            height: 280px;
+            width: 390px;
+            background-size: 390px;
+            @media (min-width: 992px) and (max-width: 1199px) {
+                right: 0;
+                height: 250px;
+                width: 330px;
+                background-size: 330px;
+            }
+            @media (max-width: 992px) {
+                height: 160px;
+                width: 250px;
+                background-size: 250px;
+                right: -4%;
+            }
+            @media (max-width: 768px) {
+                right: 5px;
+            }
+        }
+    }
+    &__body-sub {
+        padding: 15px 60px 5px;
+        max-width: 90%;
+        @media (max-width: 992px) {
+            padding: 15px 10px 5px;
+            max-width: 100%;
+        }
+    }
+    &__body-title {
+        font-size: 48px;
+        font-weight: bold;
+        color: $primary;
+        @media (min-width: 992px) and (max-width: 1199px) {
+            font-size: 32px;
+            margin-bottom: 20px !important;
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            font-size: 20px;
+            margin-bottom: 20px !important;
+        }
+        @media (max-width: 768px) {
+            font-size: 18px;
+            margin-bottom: 20px !important;
+        }
+        &.hp-order2__body-title-mobile {
+            @media (max-width: 768px) {
+                font-size: 16px !important;
+            }
+        }
+    }
+    &__body-list {
+        >li {
+            margin-bottom: 15px;
+        }
+    }
+    &__body-item {
+        font-size: 24px;
+        font-weight: bold;
+        position: relative;
+        padding-left: 50px;
+        @media (max-width: 992px) {
+            font-size: 16px;
+            padding-left: 36px;
+        }
+        &::before {
+            @extend %before;
+            top: -3px;
+            left: 0;
+            background: url(images/icons/icon-check.svg) no-repeat;
+            width: 40px;
+            height: 40px;
+            background-size: 40px;
+            @media (max-width: 992px) {
+                width: 26px;
+                height: 26px;
+                background-size: 26px;
+            }
+        }
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .note.respon-16 {
+        font-size: 14px;
+    }
+}
+
+// end hp-order2
+// start hp-order3
+.hp-order3 {
+    &__header {
+        background: url(images/uploads/socRed.png) $primary;
+        margin-bottom: 7px;
+        border-radius: 10px;
+        display: flex;
+        align-items: flex-end;
+        padding: 20px 10px;
+        @media (min-width: 992px) and (max-width: 1199px) {
+            .heading-24 {
+                font-size: 18px !important;
+            }
+        }
+        >img {
+            width: 74px;
+        }
+    }
+    &__item {
+        height: 100%;
+        border: 5px solid $primary;
+        border-radius: 10px;
+        padding: 10px;
+        min-height: 720px;
+        @media (max-width: 768px) {
+            min-height: 670px;
+        }
+    }
+    &__item-sub {
+        background: white;
+        border-radius: 10px;
+    }
+    &__thumb {
+        height: 270px;
+        margin-bottom: 15px;
+        >img {
+            border-radius: 10px;
+        }
+    }
+    &__info {
+        padding: 15px 12px 15px 16px;
+        @media (max-width: 768px) {
+            padding: 15px 5px;
+        }
+    }
+}
+
+.iconHand {
+    transform: translateY(0px);
+    margin-top: -60px;
+}
+
+.borderRadius-10 {
+    border-radius: 10px;
+}
+
+// end hp-order3
+// start hp-order4
+.hp-order4 {
+    &__item {
+        border: 5px solid $color2;
+        border-radius: 10px;
+        padding: 10px;
+        height: 100%;
+        @media (max-width: 768px) {
+            padding: 7px;
+            flex-direction: column;
+            .d-flex {
+                flex-direction: column;
+            }
+        }
+    }
+    &__header {
+        background: url(images/uploads/socOrange.png) $color2;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        padding: 10px 20px;
+        .heading-24.color3.ml-50 {
+            margin-left: 20px !important;
+            font-size: 20px;
+        }
+    }
+    &__header-big {}
+    &__thumb {
+        height: 290px;
+        @media (max-width: 500px) {
+            height: 180px;
+        }
+        >img {
+            border-radius: 10px;
+        }
+    }
+    &__info {
+        padding: 24px 10px;
+    }
+    &__info-left {
+        margin-right: 40px;
+        @media (max-width: 768px) {
+            margin-right: 0;
+            order: 2;
+        }
+    }
+    &__info-right {
+        text-align: center;
+        // margin-right: 20px;
+        @media (max-width: 768px) {
+            order: 1;
+        }
+    }
+    &__item-sub {
+        height: calc(100% - 130px);
+        @media (max-width: 992px) {
+            height: auto;
+        }
+    }
+    .iconNumber {
+        width: 100px;
+        @media (max-width: 500px) {
+            width: 60px;
+        }
+    }
+    .image-prcode {
+        max-width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .box-qrcode {
+        display: flex;
+        @media (max-width: 500px) {
+            display: block;
+        }
+    }
+}
+
+.d-block-500 {
+    display: none;
+}
+
+.d-none-500 {
+    display: block;
+}
+
+@media (max-width: 500px) {
+    .d-block-500 {
+        display: block;
+    }
+    .d-none-500 {
+        display: none;
+    }
+}
+
+.box-line {
+    position: relative;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: -17px;
+        right: 47px;
+        background: url(images/icons/line.png);
+        background-size: 85px;
+        height: 85px;
+        width: 85px;
+        @media (max-width: 575px) {
+            height: 52px;
+            width: 52px;
+            background-size: 52px;
+            bottom: -20px;
+            right: 20px;
+        }
+    }
+}
+
+.hp-order4-3 {
+    &__header {
+        position: relative;
+        margin-bottom: -55px;
+        @media (min-width: 992px) and (max-width: 1199px) {
+            margin-bottom: -33px;
+        }
+        @media (max-width: 992px) {
+            margin-bottom: -40px;
+        }
+        @media (max-width: 768px) {
+            margin-bottom: -22px;
+        }
+    }
+    &__left {
+        padding: 60px 0 60px 80px;
+        @media (max-width: 992px) {
+            padding: 30px 10px 20px 10px;
+        }
+        @media (max-width: 768px) {
+            order: 2;
+        }
+    }
+    &__right {
+        max-width: 310px;
+        @media (max-width: 768px) {
+            order: 1;
+        }
+    }
+}
+
+// end hp-order4
+// start hp-order5
+.hp-order5 {
+    &__thumb {
+        height: 320px;
+        @media (max-width: 480px) {
+            height: 200px;
+        }
+    }
+}
+
+.fixHeightLine3 {
+    height: 72px;
+    @media (max-width: 992px) {
+        height: auto;
+    }
+}
+
+// end hp-order5
+// start hp-order6
+.hp-order6 {
+    &__list {
+        >li {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+        >li:not(:last-child) {
+            border-bottom: 1px solid #c0bdbd;
+        }
+    }
+    &__item {
+        display: flex;
+        align-items: flex-end;
+        @media (max-width: 768px) {
+            display: block;
+        }
+    }
+    &--padding {
+        // padding: 30px;
+        padding: 30px 30px 20px 30px;
+        @media (max-width: 768px) {
+            padding: 20px 10px;
+        }
+    }
+    &__left {
+        width: 150px;
+        @media (max-width: 768px) {
+            width: 100%;
+            display: none;
+        }
+    }
+    &__date {
+        color: $primary;
+        font-size: 12px;
+    }
+    &__right {
+        width: calc(100% - 150px);
+        flex: 1;
+        @media (max-width: 768px) {
+            width: 100%;
+        }
+    }
+    &__right-title {
+        margin-bottom: 10px !important;
+    }
+    &__right-link {
+        display: inline-block;
+        min-width: 96px;
+        padding: 2px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        text-align: center;
+        margin-right: 10px;
+        margin-top: 10px;
+        @media (max-width: 520px) {
+            margin-right: 0;
+            min-width: auto;
+            padding: 4px;
+            font-size: 10px;
+        }
+    }
+    &__title {
+        margin-bottom: -16px;
+    }
+}
+
+// end hp-order6
+// start hp-order7
+.hp-order7 {
+    &__title {
+        font-size: 24px;
+        font-weight: bold;
+        color: $primary;
+        margin-bottom: 20px !important;
+    }
+    &__item {
+        height: 100%;
+        position: relative;
+        min-height: 360px;
+        @media (max-width: 575px) {
+            min-height: auto;
+        }
+    }
+    &__overlay {
+        position: absolute;
+        top: -40px;
+        right: 20px;
+        >img {
+            width: 100px;
+            height: 100px;
+        }
+    }
+    &__info {
+        padding: 60px 20px;
+        height: 100%;
+    }
+    &__list {
+        >li {
+            margin-top: 40px;
+        }
+    }
+    &.mb-80 {
+        @media (max-width: 575px) {
+            margin-bottom: 60px !important;
+        }
+    }
+    &__desc {
+        font-size: 16px;
+    }
+}
+
+.note-24 {
+    font-size: 24px;
+    font-weight: bold;
+    @media (min-width: 575px) and (max-width: 991px) {
+        font-size: 18px;
+    }
+    @media (max-width: 575px) {
+        font-size: 12px;
+    }
+}
+
+// end hp-order7
+// start hp-order8
+.hp-order8 {
+    padding-top: 40px;
+    @media (max-width: 575px) {
+        padding-top: 0;
+    }
+    &__desc {
+        padding: 10px 60px;
+        @media (max-width: 575px) {
+            padding: 0 10px;
+        }
+    }
+    &__item {
+        position: relative;
+    }
+    &__overlay {
+        position: absolute;
+        top: -40%;
+        right: 0%;
+
+        @media (min-width: 992px) and (max-width: 1199px) {
+            top: -35%;
+            right: -5%;
+        }
+        @media (min-width: 768px) and (max-width: 992px) {
+            max-width: 65%;
+            top: -27%;
+            right: -5%;
+        }
+        @media (min-width: 480px) and (max-width: 767px) {
+            max-width: 60%;
+            top: -15%;
+            right: -5%;
+        }
+        @media (max-width: 480px) {
+            max-width: 60%;
+            top: -13%;
+            right: -5%;
+        }
+    }
+}
+
+// end hp-order8
+// start hp-order9
+.hp-order9 {
+    padding-top: 80px;
+    @media (max-width: 575px) {
+        padding-top: 0;
+    }
+    &__desc {
+        padding: 10px 60px;
+        @media (max-width: 575px) {
+            padding: 0 10px;
+        }
+    }
+    &__item {
+        position: relative;
+        @media (max-width: 575px) {
+            padding: 5px;
+        }
+        .row {
+            margin-left: -2px !important;
+            margin-right: -2px !important;
+        }
+        .col-md-6 {
+            padding-left: 2px !important;
+            padding-right: 2px !important;
+        }
+    }
+    &__overlay {
+        position: absolute;
+        top: -35%;
+        left: 0;
+        z-index: 10;
+        @media (max-width: 575px) {
+            top: -10%;
+        }
+        @media (min-width: 576px) and (max-width: 767px) {
+            top: -12%;
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            top: -25%;
+        }
+    }
+    .hp-order4__item {
+        border: 5px solid $color4;
+    }
+    .hp-order5__thumb {
+        @media (max-width: 768px) {
+            height: 200px;
+        }
+    }
+    .hp-order4__info {
+        @media (max-width: 575px) {
+            padding: 10px 0;
+        }
+    }
+}
+
+// end hp-order9
+.hp-contact {
+    padding: 80px 50px 10px;
+    background-image: url(images/uploads/hp-order10-1.png);
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    background-size: auto;
+    @media (max-width: 768px) {
+        background-image: none;
+        padding: 80px 10px 10px;
+    }
+    &__w70 {
+        max-width: 70%;
+        @media (max-width: 768px) {
+            max-width: 100%;
+        }
+    }
+    &__name {
+        margin-right: 45px;
+        @media (max-width: 768px) {
+            margin-right: 0;
+        }
+    }
+    &__jcc {
+        @media (max-width: 768px) {
+            justify-content: center;
+        }
+    }
+}
+
+// start hp-order10
+.hp-order10 {
+    &__header {
+        margin-bottom: 60px;
+    }
+}
+
+// end hp-order10
+.align-items-unset {
+    align-items: unset;
+}
+
+.hp-bg-1 {
+    @media (min-width: 1441px) {
+        background: url("images/uploads/hp-bg-1-1920-1.png") no-repeat;
+        background-size: cover;
+        background-position: top;
+    }
+    background: url("images/uploads/hp-bg-1.png") no-repeat;
+    background-size: cover;
+    background-position: top;
+    padding-top: 300px;
+    @media (min-width: 992px) and (max-width: 1440px) {
+        padding-top: 200px;
+    }
+    @media (max-width: 992px) {
+        margin-top: 30px;
+        padding-top: 20px;
+        background: #f6f6f6;
+    }
+}
+
+
+.hp-bg-2 {
+    background: url("images/uploads/hp-bg-2.png") no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding-top: 360px;
+    @media (min-width: 1440px) {
+        padding-top: 450px;
+    }
+    @media (max-width: 992px) {
+        background: #e82100;
+        padding-top: 100px;
+        padding-bottom: 50px;
+    }
+}
+
+.hp-bg-3 {
+    background: url("images/uploads/hp-bg-3.png") no-repeat;
+    background-position: top;
+    background-size: cover;
+    padding-top: 400px;
+    border-bottom: 10px solid #ff7700;
+    @media (min-width: 992px) and (max-width: 1440px) {
+        padding-top: 320px;
+    }
+    @media (max-width: 992px) {
+        padding-top: 50px;
+        background: #ff9000;
+    }
+}
+
+.note.respon-16 {
+    margin-left: 60px;
+    @media (max-width: 1024px) {
+        margin-left: 0;
+    }
+}
+
+.hp-order7__item .row .hp-order7__title {
+    @media (max-width: 575px) {
+        font-size: 16px;
+    }
+}
+
+.hp-order7__item .row .hp-order7__desc {
+    @media (max-width: 575px) {
+        font-size: 12px;
+    }
+}
+
+.hp-order7__list .row .hp-order7__info.pr-0 {
+    @media (max-width: 575px) {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+    }
+}
+
+h2.text-center.hp-order4__header-big.mb-30 {
+
+    @media (min-width: 992px) {
+        margin-top: -45px;
+    }
+}
+
+.text-nowrap.heading-16.color-primary {
+    @media (min-width: 1200px) {
+        padding-right: 25px;
+    }
+}
+
+.header.hp-order7__header.text-center .mb-30 {
+    @media (min-width: 992px) {
+        margin-bottom: 60px!important;
+    } 
+}
+
+ul.hp-order7__list.row {
+    @media (min-width: 992px) {
+        margin-bottom: 30px!important;
+    } 
+}
+
+
+.same-width {
+    @media (min-width: 992px) {
+        min-width: 357px!important;
+        width: 357px;
+        max-width: auto;
+    } 
+}
+
+.section.bg-white .container.pt-50 {
+    @media (min-width: 992px) {
+        padding-top: 70px!important;
+    } 
+}
+
+.text-center.mt-50 a.see-all.btn-357.btn-h62.btn-general {
+    padding: 14px 0;
+}

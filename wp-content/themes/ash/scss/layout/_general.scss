@@ -1,0 +1,42 @@
+.link-primary:hover {
+    color: $color4;
+}
+
+.btn-pri {
+    color: white;
+    transition: transform 600ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    &:hover {
+        color: $black1;
+    }
+}
+
+.meta-time {
+    font-size: 12px;
+}
+
+.icon-18 {
+    height: 18px;
+    display: inline-block;
+}
+
+.icon-44 {
+    height: 44px;
+    display: inline-block;
+}
+
+.mlr_10 {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.respon-16 {
+    font-size: 16px;
+}
+
+.p-relative {
+    position: relative;
+}
+
+.fl-module-content {
+    margin: 0;
+}
