@@ -53,7 +53,7 @@
 					</li>
 				<?php endforeach;
 			else: ?>
-				<li class="card-box__item"><?php esc_html_e('カテゴリーが見つかりません', 'aston'); ?></li>
+				<li class="card-box__item"><?php esc_html_e('カテゴリーが見つかりません', 'twentynineteen'); ?></li>
 			<?php endif; ?>
 		</ul>
 	</div>

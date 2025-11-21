@@ -13,7 +13,7 @@ get_header();
 <div class="banner" <?php echo get_banner('posts'); ?>>
 	<div class="banner__overlay"></div>
 	<div class="banner__content">
-		<h1 class="banner__title"><?php esc_html_e('Astonスタッフブログ', 'aston'); ?></h1>
+		<h1 class="banner__title"><?php esc_html_e('Astonスタッフブログ', 'twentynineteen'); ?></h1>
 		<p class="banner__subtitle">
 			<?php
 			if (is_category()) {
@@ -23,7 +23,7 @@ get_header();
 				if ($blog_page_id) {
 					echo esc_html(get_the_title($blog_page_id));
 				} else {
-					esc_html_e('Blog', 'aston');
+					esc_html_e('Blog', 'twentynineteen');
 				}
 			}
 			?>

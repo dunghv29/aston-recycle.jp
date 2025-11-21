@@ -165,25 +165,25 @@ function aston_meta_description_callback($post) {
     <table class="form-table">
         <tbody>
             <tr>
-                <th scope="row"><label for="aston_meta_description"><?php _e('Meta Description', 'aston'); ?></label></th>
+                <th scope="row"><label for="aston_meta_description"><?php _e('Meta Description', 'twentynineteen'); ?></label></th>
                 <td>
-                    <textarea name="aston_meta_description" id="aston_meta_description" rows="3" style="width:100%;" placeholder="<?php _e('SEO説明文を入力してください（最大160文字）', 'aston'); ?>"><?php echo esc_textarea($meta_description); ?></textarea>
-                    <p class="description"><?php _e('この説明文はFacebook、Twitter、Googleで共有される際に表示されます。最大160文字まで入力できます。', 'aston'); ?></p>
-                    <p class="description"><?php _e('文字数：', 'aston'); ?><strong id="meta-char-count">0</strong>/160</p>
+                    <textarea name="aston_meta_description" id="aston_meta_description" rows="3" style="width:100%;" placeholder="<?php _e('SEO説明文を入力してください（最大160文字）', 'twentynineteen'); ?>"><?php echo esc_textarea($meta_description); ?></textarea>
+                    <p class="description"><?php _e('この説明文はFacebook、Twitter、Googleで共有される際に表示されます。最大160文字まで入力できます。', 'twentynineteen'); ?></p>
+                    <p class="description"><?php _e('文字数：', 'twentynineteen'); ?><strong id="meta-char-count">0</strong>/160</p>
                 </td>
             </tr>
             <tr>
-                <th scope="row"><label for="aston_meta_keywords"><?php _e('Meta Keywords', 'aston'); ?></label></th>
+                <th scope="row"><label for="aston_meta_keywords"><?php _e('Meta Keywords', 'twentynineteen'); ?></label></th>
                 <td>
-                    <input type="text" name="aston_meta_keywords" id="aston_meta_keywords" value="<?php echo esc_attr($meta_keywords); ?>" style="width:100%;" placeholder="<?php _e('キーワードをカンマ区切りで入力', 'aston'); ?>">
-                    <p class="description"><?php _e('例: 買取, リサイクル, 静岡', 'aston'); ?></p>
+                    <input type="text" name="aston_meta_keywords" id="aston_meta_keywords" value="<?php echo esc_attr($meta_keywords); ?>" style="width:100%;" placeholder="<?php _e('キーワードをカンマ区切りで入力', 'twentynineteen'); ?>">
+                    <p class="description"><?php _e('例: 買取, リサイクル, 静岡', 'twentynineteen'); ?></p>
                 </td>
             </tr>
             <tr>
-                <th scope="row"><label for="aston_noindex"><?php _e('検索エンジンにインデックスしない', 'aston'); ?></label></th>
+                <th scope="row"><label for="aston_noindex"><?php _e('検索エンジンにインデックスしない', 'twentynineteen'); ?></label></th>
                 <td>
                     <input type="checkbox" id="aston_noindex" name="aston_noindex" value="1" <?php checked($noindex, '1'); ?>>
-                    <label for="aston_noindex"><?php _e('このページを検索結果に表示しない', 'aston'); ?></label>
+                    <label for="aston_noindex"><?php _e('このページを検索結果に表示しない', 'twentynineteen'); ?></label>
                 </td>
             </tr>
         </tbody>
