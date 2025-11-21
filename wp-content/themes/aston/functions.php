@@ -2,9 +2,6 @@
 
 /**
  * aston functions and definitions
- *
- * @link https://developer.wordpress.org/themes/basics/theme-functions/
- *
  * @package aston
  */
 
@@ -41,16 +38,6 @@ if (!function_exists('aston_sanitize_iframe')) {
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Include security hardening
- */
-require get_template_directory() . '/inc/security.php';
-
-/**
- * Include SEO Meta Tags
- */
-require get_template_directory() . '/inc/seo-meta.php';
-
-/**
  * Include Admin Menu Organizer
  */
 require get_template_directory() . '/inc/admin-menu-organizer.php';
@@ -59,16 +46,6 @@ require get_template_directory() . '/inc/admin-menu-organizer.php';
  * Include Bootstrap Navwalker
  */
 require get_template_directory() . '/inc/class-wp-bootstrap-navwalker.php';
-
-/**
- * Include Page Setup Helper
- */
-require get_template_directory() . '/inc/page-setup.php';
-
-/**
- * Include Diagnostics Tool
- */
-require get_template_directory() . '/inc/diagnostics.php';
 
 /**
  * Sets up theme defaults and registers support for various WordPress features.
