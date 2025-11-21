@@ -5,9 +5,168 @@
  * @package aston
  */
 
+
 if (!defined('_S_VERSION')) {
 	// Replace the version number of the theme on each release.
 	define('_S_VERSION', '1.0.0');
+}
+
+// Load required files using theme directory
+require_once get_template_directory() . '/common.php';
+require_once get_template_directory() . '/inc/Type.php';
+require_once get_template_directory() . '/inc/PurchaseResult.php';
+require_once get_template_directory() . '/inc/SendMail.php';
+
+// Enqueue frontend scripts/styles
+if (!function_exists('ASH_customize_script')) {
+	function ASH_customize_script() {
+		wp_enqueue_script('ASH_slim_script', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js');
+		wp_enqueue_script('ASH_boot_script', 'https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js');
+		wp_enqueue_style('ASH_bootstrap_style','https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css');
+	}
+	add_action('wp_enqueue_scripts', 'ASH_customize_script');
+}
+
+// Enqueue admin scripts/styles if needed (example placeholder)
+// function aston_admin_scripts() {}
+// add_action('admin_enqueue_scripts', 'aston_admin_scripts');
+
+// Register ajax and localize script
+if (!function_exists('my_script_enqueuer')) {
+	function my_script_enqueuer() {
+		wp_register_script('aston_script', false, array('jquery'));
+		wp_localize_script('aston_script', 'myAjax', array('ajaxurl' => admin_url('admin-ajax.php')));
+		wp_enqueue_script('jquery');
+		wp_enqueue_script('aston_script');
+	}
+	add_action('init', 'my_script_enqueuer');
+}
+
+// Add custom admin menu
+if (!function_exists('add_menu_admin')) {
+	function add_menu_admin() {
+		add_menu_page(
+			__('カテゴリー'),
+			__('カテゴリー'),
+			'manage_options',
+			'type',
+			'typeInit',
+			'dashicons-screenoptions',
+			2
+		);
+		add_menu_page(
+			__('買取り実績'),
+			__('買取り実績'),
+			'manage_options',
+			'purchase-result',
+			'purchaseResultInit',
+			'dashicons-schedule',
+			3
+		);
+		remove_submenu_page('edit.php', 'edit-tags.php?taxonomy=category');
+	}
+	add_action('admin_menu', 'add_menu_admin');
+}
+
+
+// Admin menu callbacks
+if (!function_exists('typeInit')) {
+	function typeInit() {
+		echo '<div class="wrap"><h1>カテゴリー管理ページ</h1><p>Đây là trang quản lý Category (tùy chỉnh nội dung tại đây).</p></div>';
+	}
+}
+if (!function_exists('purchaseResultInit')) {
+	function purchaseResultInit() {
+		echo '<div class="wrap"><h1>買取り実績管理ページ</h1><p>Đây là trang quản lý Purchase Result (tùy chỉnh nội dung tại đây).</p></div>';
+	}
+}
+
+add_action('wp_ajax_request_view', 'visitorSite');
+add_action('wp_ajax_nopriv_request_view', 'visitorSite');
+
+if (!function_exists('visitorSite')) {
+	function visitorSite() {
+		global $wpdb;
+		$visitorIp = $_SERVER['REMOTE_ADDR'];
+		$date = date('Y-m-d');
+		$tableName = $wpdb->prefix.'count_visitor';
+		$wpdb->query("DELETE FROM {$tableName} WHERE DATE(created_at) < '{$date}' AND type = 3");
+		$sql = "SELECT * FROM {$tableName} where type = 3 AND ip = '{$visitorIp}' AND DATE(created_at) = '{$date}' LIMIT 1";
+		$result = $wpdb->get_row($sql);
+		if (!$result) {
+			$wpdb->insert($tableName, [
+				'type' => 3,
+				'ip' => $visitorIp,
+				'created_at' => current_time('mysql')
+			]);
+		}
+		$data = $wpdb->get_row("SELECT * FROM {$tableName} WHERE type = 2 AND DATE(created_at) = '{$date}' LIMIT 1");
+		if ($data) {
+			$wpdb->query("UPDATE {$tableName} SET number = number + 1 WHERE type = 2");
+		} else {
+			$wpdb->query("DELETE FROM {$tableName} WHERE type = 2");
+			$wpdb->insert($tableName, [
+				'type' => 2,
+				'number' => 1,
+				'created_at' => current_time('mysql')
+			]);
+		}
+		$data = $wpdb->get_row("SELECT * FROM {$tableName} WHERE type = 1 LIMIT 1");
+		if ($data) {
+			$wpdb->query("UPDATE {$tableName} SET number = number + 1 WHERE type = 1");
+		} else {
+			$wpdb->insert($tableName, [
+				'type' => 1,
+				'number' => 1
+			]);
+		}
+		$countOfDayVisit = $wpdb->get_var("SELECT count(*) FROM {$tableName} WHERE type = 3");
+		$countViewOfDay = $wpdb->get_var("SELECT number FROM {$tableName} WHERE type = 2 LIMIT 1");
+		$countView = $wpdb->get_var("SELECT number FROM {$tableName} WHERE type = 1 LIMIT 1");
+		wp_send_json(['code' => 200, 'data' => [
+			'countOfDayVisit' => $countOfDayVisit,
+			'countViewOfDay' => $countViewOfDay,
+			'countView' => $countView
+		]]);
+	}
+}
+function load_template_part_emails($template_name = '', $args) {
+    ob_start();
+    get_template_part("template-parts/emails/{$template_name}", '', $args);
+    $var = ob_get_contents();
+    ob_end_clean();
+    return $var;
+}
+
+add_action('wp_ajax_get_post', 'getPost');
+add_action('wp_ajax_nopriv_get_post', 'getPost');
+
+if (!function_exists('getPost')) {
+	function getPost() {
+		$page = get_query_var('paged') ? get_query_var('paged') : 1;
+		$args = [
+			'post_type' => 'post',
+			'orderby' => 'ID',
+			'post_status' => 'publish',
+			'order' => 'DESC',
+			'posts_per_page' => 5,
+			'paged' => $page
+		];
+		$result = new WP_Query($args);
+		$arr = [];
+		if ($result->have_posts()) :
+			while ($result->have_posts()) :
+				$result->the_post();
+				$arr[] = [
+					'date' => get_the_date('Y.m.d'),
+					'id' => get_the_ID(),
+					'title' => get_the_title(),
+					'tags' => get_the_tags()
+				];
+			endwhile;
+		endif;
+		wp_send_json(['code' => 200, 'data' => $arr]);
+	}
 }
 
 /**
@@ -141,29 +300,6 @@ function aston_setup()
 add_action('after_setup_theme', 'aston_setup');
 
 /**
- * Set the content width in pixels, based on the theme's design and stylesheet.
- *
- * Priority 0 to make it available to lower priority callbacks.
- *
- * @global int $content_width
- */
-function aston_content_width()
-{
-	$GLOBALS['content_width'] = apply_filters('aston_content_width', 640);
-}
-add_action('after_setup_theme', 'aston_content_width', 0);
-
-/**
- * Add image sizes for better performance.
- */
-function aston_custom_image_sizes() {
-	add_image_size('aston-banner', 1920, 600, true);
-	add_image_size('aston-thumbnail', 400, 300, true);
-	add_image_size('aston-medium', 800, 600, true);
-}
-add_action('after_setup_theme', 'aston_custom_image_sizes');
-
-/**
  * Add lazy loading to images.
  */
 function aston_add_lazy_loading($content) {
@@ -195,31 +331,6 @@ function aston_enable_webp_upload($mimes) {
 }
 add_filter('upload_mimes', 'aston_enable_webp_upload');
 
-/**
- * Rename uploaded files to avoid duplicates and conflicts.
- * Format: timestamp-random-original-name.ext
- * 
- * @param array $file File upload array.
- * @return array Modified file array.
- */
-function aston_rename_uploaded_file($file) {
-	$extension = pathinfo($file['name'], PATHINFO_EXTENSION);
-	$basename = pathinfo($file['name'], PATHINFO_FILENAME);
-	
-	// Sanitize filename: remove special chars, convert to lowercase
-	$basename = sanitize_file_name($basename);
-	$basename = strtolower($basename);
-	$basename = preg_replace('/[^a-z0-9\-_]/', '', $basename);
-	
-	// Create unique filename: timestamp-random-basename.ext
-	$timestamp = date('YmdHis');
-	$random = substr(md5(uniqid()), 0, 6);
-	$new_filename = $timestamp . '-' . $random . '-' . $basename . '.' . $extension;
-	
-	$file['name'] = $new_filename;
-	return $file;
-}
-add_filter('wp_handle_upload_prefilter', 'aston_rename_uploaded_file');
 
 /**
  * Optimize WordPress for better performance.
@@ -727,64 +838,6 @@ function aston_save_antique_product_meta($post_id)
 }
 add_action('save_post_antique_products', 'aston_save_antique_product_meta');
 
-/**
- * Remove unnecessary admin menu items and customizations.
- */
-/**
- * Add custom meta box for services: custom link
- */
-
-function aston_remove_admin_menus() {
-	remove_menu_page('plugins.php'); // Remove Plugins menu
-	remove_menu_page('edit-comments.php'); // Remove Comments menu
-	remove_filter('update_footer', 'core_update_footer');
-}
-add_action('admin_menu', 'aston_remove_admin_menus');
-
-/**
- * Disable WordPress core, plugin, and theme updates.
- */
-function aston_disable_updates() {
-	// Disable core updates
-	add_filter('auto_update_core', '__return_false');
-	remove_action('wp_version_check', 'wp_version_check');
-	remove_action('admin_init', '_maybe_update_core');
-	
-	// Disable plugin updates
-	remove_action('load-update-core.php', 'wp_update_plugins');
-	add_filter('auto_update_plugin', '__return_false');
-	
-	// Disable theme updates
-	remove_action('load-update-core.php', 'wp_update_themes');
-	add_filter('auto_update_theme', '__return_false');
-	
-	// Hide update notices
-	add_filter('pre_site_transient_update_core', '__return_null');
-	add_filter('pre_site_transient_update_plugins', '__return_null');
-	add_filter('pre_site_transient_update_themes', '__return_null');
-}
-add_action('init', 'aston_disable_updates', 1);
-
-/**
- * Remove update menu from admin bar.
- */
-function aston_remove_update_menu() {
-	remove_action('admin_notices', 'update_nag', 3);
-}
-add_action('admin_menu', 'aston_remove_update_menu');
-
-/**
- * Redirect comments page to admin dashboard.
- */
-function aston_redirect_comments_page() {
-	global $pagenow;
-	if ($pagenow === 'edit-comments.php') {
-		wp_safe_redirect(admin_url());
-		exit;
-	}
-}
-add_action('admin_init', 'aston_redirect_comments_page');
-
 /* ==== End Custom Post Types ==== */
 
 
@@ -1049,15 +1102,4 @@ function aston_get_theme_mod($setting, $default = false) {
 	
 	return $value;
 }
-
-/**
- * Redirect old CPTs to under construction page
- */
-function aston_redirect_old_cpts() {
-    if (is_post_type_archive('products_sale') || is_post_type_archive('products_purchase') || is_singular('products_sale') || is_singular('products_purchase')) {
-        wp_redirect(home_url('/under-construction/'));
-        exit;
-    }
-}
-add_action('template_redirect', 'aston_redirect_old_cpts');
 
