@@ -23,13 +23,13 @@ get_header();
 					<h2 class="page-main__title">
 						<?php
 						/* translators: %s: search query */
-						printf(esc_html__('検索結果: "%s"', 'twentynineteen'), '<span>' . get_search_query() . '</span>');
+						printf(esc_html__('検索結果: "%s"', 'aston'), '<span>' . get_search_query() . '</span>');
 						?>
 					</h2>
 					<p class="search-results-count">
 						<?php
 						/* translators: %s: number of results */
-						printf(esc_html__('%s件の結果が見つかりました', 'twentynineteen'), $wp_query->found_posts);
+						printf(esc_html__('%s件の結果が見つかりました', 'aston'), $wp_query->found_posts);
 						?>
 					</p>
 
@@ -81,8 +81,8 @@ get_header();
 
 				<?php else : ?>
 					<div class="no-results">
-						<h2 class="page-main__title"><?php esc_html_e('検索結果が見つかりませんでした', 'twentynineteen'); ?></h2>
-						<p><?php esc_html_e('別のキーワードで検索してみてください。', 'twentynineteen'); ?></p>
+						<h2 class="page-main__title"><?php esc_html_e('検索結果が見つかりませんでした', 'aston'); ?></h2>
+						<p><?php esc_html_e('別のキーワードで検索してみてください。', 'aston'); ?></p>
 						
 						<!-- Search Form -->
 						<div class="search-form-wrapper mt-4">

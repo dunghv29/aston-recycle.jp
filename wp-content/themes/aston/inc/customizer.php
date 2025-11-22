@@ -32,7 +32,7 @@ function aston_customize_register($wp_customize)
     }
 
     // Change Site Identity section title to Sites
-    $wp_customize->get_section('title_tagline')->title = __('Sites', 'twentynineteen');
+    $wp_customize->get_section('title_tagline')->title = __('Sites', 'aston');
 
     // Remove unwanted sections
     $wp_customize->remove_section('colors');
@@ -48,7 +48,7 @@ function aston_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('aston_phone', array(
-        'label' => __('電話番号', 'twentynineteen'),
+        'label' => __('電話番号', 'aston'),
         'section' => 'title_tagline',
         'settings' => 'aston_phone',
         'type' => 'text',
@@ -62,7 +62,7 @@ function aston_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('aston_business_hours', array(
-        'label' => __('営業時間', 'twentynineteen'),
+        'label' => __('営業時間', 'aston'),
         'section' => 'title_tagline',
         'settings' => 'aston_business_hours',
         'type' => 'text',
@@ -76,7 +76,7 @@ function aston_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('aston_line_url', array(
-        'label' => __('LINEボタンURL', 'twentynineteen'),
+        'label' => __('LINEボタンURL', 'aston'),
         'section' => 'title_tagline',
         'settings' => 'aston_line_url',
         'type' => 'url',
@@ -90,7 +90,7 @@ function aston_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('aston_contact_url', array(
-        'label' => __('お問い合わせボタンURL', 'twentynineteen'),
+        'label' => __('お問い合わせボタンURL', 'aston'),
         'section' => 'title_tagline',
         'settings' => 'aston_contact_url',
         'type' => 'url',
@@ -103,7 +103,7 @@ function aston_customize_register($wp_customize)
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('aston_banner_tooltip_text', array(
-        'label' => __('ツールチップテキスト', 'twentynineteen'),
+        'label' => __('ツールチップテキスト', 'aston'),
         'section' => 'title_tagline',
         'type' => 'text',
     ));
@@ -114,7 +114,7 @@ function aston_customize_register($wp_customize)
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('aston_banner_title', array(
-        'label' => __('タイトル', 'twentynineteen'),
+        'label' => __('タイトル', 'aston'),
         'section' => 'title_tagline',
         'type' => 'text',
     ));
@@ -125,7 +125,7 @@ function aston_customize_register($wp_customize)
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('aston_banner_feature_1', array(
-        'label' => __('査定費・出張費無料', 'twentynineteen'),
+        'label' => __('査定費・出張費無料', 'aston'),
         'section' => 'title_tagline',
         'type' => 'text',
     ));
@@ -136,7 +136,7 @@ function aston_customize_register($wp_customize)
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('aston_banner_feature_2', array(
-        'label' => __('熟練の査定員多数', 'twentynineteen'),
+        'label' => __('熟練の査定員多数', 'aston'),
         'section' => 'title_tagline',
         'type' => 'text',
     ));
@@ -147,7 +147,7 @@ function aston_customize_register($wp_customize)
         'sanitize_callback' => 'sanitize_text_field',
     ));
     $wp_customize->add_control('aston_banner_feature_3', array(
-        'label' => __('即日対応', 'twentynineteen'),
+        'label' => __('即日対応', 'aston'),
         'section' => 'title_tagline',
         'type' => 'text',
     ));
@@ -157,16 +157,16 @@ function aston_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'aston_banner_image', array(
-        'label' => __('バナー画像', 'twentynineteen'),
+        'label' => __('バナー画像', 'aston'),
         'section' => 'title_tagline',
         'mime_type' => 'image',
     )));
 
     // ========== Reason Section (選ばれる3つの理由) ==========
     $wp_customize->add_section('aston_reason_section', array(
-        'title' => __('選ばれる3つの理由', 'twentynineteen'),
+        'title' => __('選ばれる3つの理由', 'aston'),
         'priority' => 35,
-        'description' => __('トップページの「選ばれる理由」セクションの設定', 'twentynineteen'),
+        'description' => __('トップページの「選ばれる理由」セクションの設定', 'aston'),
     ));
 
     // Reason Card 1
@@ -176,10 +176,10 @@ function aston_customize_register($wp_customize)
         'sanitize_callback' => 'wp_kses_post',
     ));
     $wp_customize->add_control('aston_reason_1_title', array(
-        'label' => __('理由1 - タイトル', 'twentynineteen'),
+        'label' => __('理由1 - タイトル', 'aston'),
         'section' => 'aston_reason_section',
         'type' => 'textarea',
-        'description' => __('HTMLタグ可（<br>, <span>等）', 'twentynineteen'),
+        'description' => __('HTMLタグ可（<br>, <span>等）', 'aston'),
     ));
 
     $wp_customize->add_setting('aston_reason_1_desc', array(
@@ -188,7 +188,7 @@ function aston_customize_register($wp_customize)
         'sanitize_callback' => 'wp_kses_post',
     ));
     $wp_customize->add_control('aston_reason_1_desc', array(
-        'label' => __('理由1 - 説明文', 'twentynineteen'),
+        'label' => __('理由1 - 説明文', 'aston'),
         'section' => 'aston_reason_section',
         'type' => 'textarea',
     ));
@@ -197,7 +197,7 @@ function aston_customize_register($wp_customize)
         'sanitize_callback' => 'absint',
     ));
     $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'aston_reason_1_image', array(
-        'label' => __('理由1 - 画像', 'twentynineteen'),
+        'label' => __('理由1 - 画像', 'aston'),
         'section' => 'aston_reason_section',
         'mime_type' => 'image',
     )));
@@ -209,7 +209,7 @@ function aston_customize_register($wp_customize)
         'sanitize_callback' => 'wp_kses_post',
     ));
     $wp_customize->add_control('aston_reason_2_title', array(
-        'label' => __('理由2 - タイトル', 'twentynineteen'),
+        'label' => __('理由2 - タイトル', 'aston'),
         'section' => 'aston_reason_section',
         'type' => 'textarea',
     ));
@@ -220,7 +220,7 @@ function aston_customize_register($wp_customize)
         'sanitize_callback' => 'wp_kses_post',
     ));
     $wp_customize->add_control('aston_reason_2_desc', array(
-        'label' => __('理由2 - 説明文', 'twentynineteen'),
+        'label' => __('理由2 - 説明文', 'aston'),
         'section' => 'aston_reason_section',
         'type' => 'textarea',
     ));
@@ -229,7 +229,7 @@ function aston_customize_register($wp_customize)
         'sanitize_callback' => 'absint',
     ));
     $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'aston_reason_2_image', array(
-        'label' => __('理由2 - 画像', 'twentynineteen'),
+        'label' => __('理由2 - 画像', 'aston'),
         'section' => 'aston_reason_section',
         'mime_type' => 'image',
     )));
@@ -241,7 +241,7 @@ function aston_customize_register($wp_customize)
         'sanitize_callback' => 'wp_kses_post',
     ));
     $wp_customize->add_control('aston_reason_3_title', array(
-        'label' => __('理由3 - タイトル', 'twentynineteen'),
+        'label' => __('理由3 - タイトル', 'aston'),
         'section' => 'aston_reason_section',
         'type' => 'textarea',
     ));
@@ -252,7 +252,7 @@ function aston_customize_register($wp_customize)
         'sanitize_callback' => 'wp_kses_post',
     ));
     $wp_customize->add_control('aston_reason_3_desc', array(
-        'label' => __('理由3 - 説明文', 'twentynineteen'),
+        'label' => __('理由3 - 説明文', 'aston'),
         'section' => 'aston_reason_section',
         'type' => 'textarea',
     ));
@@ -261,7 +261,7 @@ function aston_customize_register($wp_customize)
         'sanitize_callback' => 'absint',
     ));
     $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'aston_reason_3_image', array(
-        'label' => __('理由3 - 画像', 'twentynineteen'),
+        'label' => __('理由3 - 画像', 'aston'),
         'section' => 'aston_reason_section',
         'mime_type' => 'image',
     )));
@@ -275,7 +275,7 @@ function aston_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control('aston_copyright_bottom', array(
-        'label' => __('著作権表記', 'twentynineteen'),
+        'label' => __('著作権表記', 'aston'),
         'section' => 'title_tagline',
         'settings' => 'aston_copyright_bottom',
         'type' => 'text',
@@ -286,7 +286,7 @@ function aston_customize_register($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'aston_footer_logo', array(
-        'label' => __('フッターロゴ', 'twentynineteen'),
+        'label' => __('フッターロゴ', 'aston'),
         'section' => 'title_tagline',
         'settings' => 'aston_footer_logo',
         'mime_type' => 'image',
@@ -294,8 +294,8 @@ function aston_customize_register($wp_customize)
     
     //Banner Archive Section
     $wp_customize->add_section('custom_post_type_banner_section', array(
-        'title' => __('アーカイブバナー設定', 'twentynineteen'),
-        'description' => __('各投稿タイプのアーカイブページ用バナー画像を設定', 'twentynineteen'),
+        'title' => __('アーカイブバナー設定', 'aston'),
+        'description' => __('各投稿タイプのアーカイブページ用バナー画像を設定', 'aston'),
         'priority' => 30,
     ));
 
@@ -329,11 +329,11 @@ add_action('customize_register', 'aston_customize_register');
 function aston_register_menus()
 {
     register_nav_menus(array(
-        'primary' => __('Primary', 'twentynineteen'),
-        'footer_col_1' => __('Footer Column 1', 'twentynineteen'),
-        'footer_col_2' => __('Footer Column 2', 'twentynineteen'),
-        'footer_col_3' => __('Footer Column 3', 'twentynineteen'),
-        'footer_col_4' => __('Footer Column 4', 'twentynineteen'),
+        'primary' => __('Primary', 'aston'),
+        'footer_col_1' => __('Footer Column 1', 'aston'),
+        'footer_col_2' => __('Footer Column 2', 'aston'),
+        'footer_col_3' => __('Footer Column 3', 'aston'),
+        'footer_col_4' => __('Footer Column 4', 'aston'),
     ));
 }
 add_action('init', 'aston_register_menus');
@@ -401,7 +401,7 @@ add_action('customize_register', 'aston_customize_selective_refresh', 20);
 add_action('customize_register', function($wp_customize) {
     // Add Company Maps Section
     $wp_customize->add_section('aston_company_maps', array(
-        'title' => __('会社マップ設定', 'twentynineteen'),
+        'title' => __('会社マップ設定', 'aston'),
         'priority' => 35,
     ));
 
@@ -413,8 +413,8 @@ add_action('customize_register', function($wp_customize) {
     ));
 
     $wp_customize->add_control(new Aston_Customize_Textarea_Control($wp_customize, 'aston_map_ito_honten', array(
-        'label' => __('Aston伊東本店 Google Map', 'twentynineteen'),
-        'description' => __('Google Mapsの<iframe>タグをそのまま貼り付けてください', 'twentynineteen'),
+        'label' => __('Aston伊東本店 Google Map', 'aston'),
+        'description' => __('Google Mapsの<iframe>タグをそのまま貼り付けてください', 'aston'),
         'section' => 'aston_company_maps',
         'settings' => 'aston_map_ito_honten',
     )));
@@ -427,8 +427,8 @@ add_action('customize_register', function($wp_customize) {
     ));
 
     $wp_customize->add_control(new Aston_Customize_Textarea_Control($wp_customize, 'aston_map_numazu', array(
-        'label' => __('Aston沼津店 Google Map', 'twentynineteen'),
-        'description' => __('Google Mapsの<iframe>タグをそのまま貼り付けてください', 'twentynineteen'),
+        'label' => __('Aston沼津店 Google Map', 'aston'),
+        'description' => __('Google Mapsの<iframe>タグをそのまま貼り付けてください', 'aston'),
         'section' => 'aston_company_maps',
         'settings' => 'aston_map_numazu',
     )));
@@ -441,8 +441,8 @@ add_action('customize_register', function($wp_customize) {
     ));
 
     $wp_customize->add_control(new Aston_Customize_Textarea_Control($wp_customize, 'aston_map_antique', array(
-        'label' => __('Astonアンティーク Google Map', 'twentynineteen'),
-        'description' => __('Google Mapsの<iframe>タグをそのまま貼り付けてください', 'twentynineteen'),
+        'label' => __('Astonアンティーク Google Map', 'aston'),
+        'description' => __('Google Mapsの<iframe>タグをそのまま貼り付けてください', 'aston'),
         'section' => 'aston_company_maps',
         'settings' => 'aston_map_antique',
     )));

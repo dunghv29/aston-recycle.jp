@@ -219,9 +219,9 @@ function aston_setup()
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on aston, use a find and replace
-	 * to change 'twentynineteen' to the name of your theme in all the template files.
+	 * to change 'aston' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain('twentynineteen', get_template_directory() . '/languages');
+	load_theme_textdomain('aston', get_template_directory() . '/languages');
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support('automatic-feed-links');
@@ -246,11 +246,11 @@ function aston_setup()
 	 * This theme uses wp_nav_menu() in multiple locations.
 	 */
 	register_nav_menus(array(
-		'primary' => esc_html__('Primary Menu', 'twentynineteen'),
-		'footer_col_1' => esc_html__('Footer Column 1', 'twentynineteen'),
-		'footer_col_2' => esc_html__('Footer Column 2', 'twentynineteen'),
-		'footer_col_3' => esc_html__('Footer Column 3', 'twentynineteen'),
-		'footer_col_4' => esc_html__('Footer Column 4', 'twentynineteen'),
+		'primary' => esc_html__('Primary Menu', 'aston'),
+		'footer_col_1' => esc_html__('Footer Column 1', 'aston'),
+		'footer_col_2' => esc_html__('Footer Column 2', 'aston'),
+		'footer_col_3' => esc_html__('Footer Column 3', 'aston'),
+		'footer_col_4' => esc_html__('Footer Column 4', 'aston'),
 	));
 
 	/*
@@ -415,21 +415,21 @@ function aston_register_cpt()
 	// Services CPT
 	register_post_type('services', array(
 		'labels' => array(
-			'name' => __('サービス', 'twentynineteen'),
-			'singular_name' => __('サービス', 'twentynineteen'),
-			'menu_name' => __('サービス', 'twentynineteen'),
-			'add_new' => __('新規追加', 'twentynineteen'),
-			'add_new_item' => __('サービスを追加', 'twentynineteen'),
-			'edit_item' => __('サービスを編集', 'twentynineteen'),
-			'new_item' => __('新規サービス', 'twentynineteen'),
-			'view_item' => __('サービスを見る', 'twentynineteen'),
-			'search_items' => __('サービスを検索', 'twentynineteen'),
-			'not_found' => __('サービスが見つかりません', 'twentynineteen'),
-			'not_found_in_trash' => __('ゴミ箱にサービスが見つかりません', 'twentynineteen'),
-			'all_items' => __('すべてのサービス', 'twentynineteen'),
-			'archives' => __('サービスアーカイブ', 'twentynineteen'),
+			'name' => __('サービス', 'aston'),
+			'singular_name' => __('サービス', 'aston'),
+			'menu_name' => __('サービス', 'aston'),
+			'add_new' => __('新規追加', 'aston'),
+			'add_new_item' => __('サービスを追加', 'aston'),
+			'edit_item' => __('サービスを編集', 'aston'),
+			'new_item' => __('新規サービス', 'aston'),
+			'view_item' => __('サービスを見る', 'aston'),
+			'search_items' => __('サービスを検索', 'aston'),
+			'not_found' => __('サービスが見つかりません', 'aston'),
+			'not_found_in_trash' => __('ゴミ箱にサービスが見つかりません', 'aston'),
+			'all_items' => __('すべてのサービス', 'aston'),
+			'archives' => __('サービスアーカイブ', 'aston'),
 		),
-		'description' => __('会社のサービス情報を管理', 'twentynineteen'),
+		'description' => __('会社のサービス情報を管理', 'aston'),
 		'public' => true,
 		'publicly_queryable' => true,
 		'show_ui' => true,
@@ -447,21 +447,21 @@ function aston_register_cpt()
 	// FAQs CPT
 	register_post_type('faqs', array(
 		'labels' => array(
-			'name' => __('よくある質問', 'twentynineteen'),
-			'singular_name' => __('質問', 'twentynineteen'),
-			'menu_name' => __('よくある質問', 'twentynineteen'),
-			'add_new' => __('新規追加', 'twentynineteen'),
-			'add_new_item' => __('質問を追加', 'twentynineteen'),
-			'edit_item' => __('質問を編集', 'twentynineteen'),
-			'new_item' => __('新規質問', 'twentynineteen'),
-			'view_item' => __('質問を見る', 'twentynineteen'),
-			'search_items' => __('質問を検索', 'twentynineteen'),
-			'not_found' => __('質問が見つかりません', 'twentynineteen'),
-			'not_found_in_trash' => __('ゴミ箱に質問が見つかりません', 'twentynineteen'),
-			'all_items' => __('すべての質問', 'twentynineteen'),
-			'archives' => __('質問アーカイブ', 'twentynineteen'),
+			'name' => __('よくある質問', 'aston'),
+			'singular_name' => __('質問', 'aston'),
+			'menu_name' => __('よくある質問', 'aston'),
+			'add_new' => __('新規追加', 'aston'),
+			'add_new_item' => __('質問を追加', 'aston'),
+			'edit_item' => __('質問を編集', 'aston'),
+			'new_item' => __('新規質問', 'aston'),
+			'view_item' => __('質問を見る', 'aston'),
+			'search_items' => __('質問を検索', 'aston'),
+			'not_found' => __('質問が見つかりません', 'aston'),
+			'not_found_in_trash' => __('ゴミ箱に質問が見つかりません', 'aston'),
+			'all_items' => __('すべての質問', 'aston'),
+			'archives' => __('質問アーカイブ', 'aston'),
 		),
-		'description' => __('よくある質問を管理', 'twentynineteen'),
+		'description' => __('よくある質問を管理', 'aston'),
 		'public' => true,
 		'publicly_queryable' => true,
 		'show_ui' => true,
@@ -478,17 +478,17 @@ function aston_register_cpt()
 
 	register_taxonomy('faqs_category', 'faqs', array(
 		'labels' => array(
-			'name' => __('FAQカテゴリー', 'twentynineteen'),
-			'singular_name' => __('カテゴリー', 'twentynineteen'),
-			'search_items' => __('カテゴリーを検索', 'twentynineteen'),
-			'all_items' => __('すべてのカテゴリー', 'twentynineteen'),
-			'parent_item' => __('親カテゴリー', 'twentynineteen'),
-			'parent_item_colon' => __('親カテゴリー:', 'twentynineteen'),
-			'edit_item' => __('カテゴリーを編集', 'twentynineteen'),
-			'update_item' => __('カテゴリーを更新', 'twentynineteen'),
-			'add_new_item' => __('新しいカテゴリーを追加', 'twentynineteen'),
-			'new_item_name' => __('新しいカテゴリー名', 'twentynineteen'),
-			'menu_name' => __('カテゴリー', 'twentynineteen'),
+			'name' => __('FAQカテゴリー', 'aston'),
+			'singular_name' => __('カテゴリー', 'aston'),
+			'search_items' => __('カテゴリーを検索', 'aston'),
+			'all_items' => __('すべてのカテゴリー', 'aston'),
+			'parent_item' => __('親カテゴリー', 'aston'),
+			'parent_item_colon' => __('親カテゴリー:', 'aston'),
+			'edit_item' => __('カテゴリーを編集', 'aston'),
+			'update_item' => __('カテゴリーを更新', 'aston'),
+			'add_new_item' => __('新しいカテゴリーを追加', 'aston'),
+			'new_item_name' => __('新しいカテゴリー名', 'aston'),
+			'menu_name' => __('カテゴリー', 'aston'),
 		),
 		'public' => true,
 		'hierarchical' => true,
@@ -502,21 +502,21 @@ function aston_register_cpt()
 	// Jobs CPT
 	register_post_type('jobs', array(
 		'labels' => array(
-			'name' => __('求人', 'twentynineteen'),
-			'singular_name' => __('求人', 'twentynineteen'),
-			'menu_name' => __('求人情報', 'twentynineteen'),
-			'add_new' => __('新規追加', 'twentynineteen'),
-			'add_new_item' => __('求人を追加', 'twentynineteen'),
-			'edit_item' => __('求人を編集', 'twentynineteen'),
-			'new_item' => __('新規求人', 'twentynineteen'),
-			'view_item' => __('求人を見る', 'twentynineteen'),
-			'search_items' => __('求人を検索', 'twentynineteen'),
-			'not_found' => __('求人が見つかりません', 'twentynineteen'),
-			'not_found_in_trash' => __('ゴミ箱に求人が見つかりません', 'twentynineteen'),
-			'all_items' => __('すべての求人', 'twentynineteen'),
-			'archives' => __('求人アーカイブ', 'twentynineteen'),
+			'name' => __('求人', 'aston'),
+			'singular_name' => __('求人', 'aston'),
+			'menu_name' => __('求人情報', 'aston'),
+			'add_new' => __('新規追加', 'aston'),
+			'add_new_item' => __('求人を追加', 'aston'),
+			'edit_item' => __('求人を編集', 'aston'),
+			'new_item' => __('新規求人', 'aston'),
+			'view_item' => __('求人を見る', 'aston'),
+			'search_items' => __('求人を検索', 'aston'),
+			'not_found' => __('求人が見つかりません', 'aston'),
+			'not_found_in_trash' => __('ゴミ箱に求人が見つかりません', 'aston'),
+			'all_items' => __('すべての求人', 'aston'),
+			'archives' => __('求人アーカイブ', 'aston'),
 		),
-		'description' => __('求人情報を管理', 'twentynineteen'),
+		'description' => __('求人情報を管理', 'aston'),
 		'public' => true,
 		'publicly_queryable' => true,
 		'show_ui' => true,
@@ -534,20 +534,20 @@ function aston_register_cpt()
 	// Product Categories CPT (for front page display)
 	register_post_type('product_categories', array(
 		'labels' => array(
-			'name' => __('商品カテゴリー表示', 'twentynineteen'),
-			'singular_name' => __('商品カテゴリー', 'twentynineteen'),
-			'menu_name' => __('商品カテゴリー表示', 'twentynineteen'),
-			'add_new' => __('新規追加', 'twentynineteen'),
-			'add_new_item' => __('カテゴリーを追加', 'twentynineteen'),
-			'edit_item' => __('カテゴリーを編集', 'twentynineteen'),
-			'new_item' => __('新規カテゴリー', 'twentynineteen'),
-			'view_item' => __('カテゴリーを見る', 'twentynineteen'),
-			'search_items' => __('カテゴリーを検索', 'twentynineteen'),
-			'not_found' => __('カテゴリーが見つかりません', 'twentynineteen'),
-			'not_found_in_trash' => __('ゴミ箱にカテゴリーが見つかりません', 'twentynineteen'),
-			'all_items' => __('すべてのカテゴリー', 'twentynineteen'),
+			'name' => __('商品カテゴリー表示', 'aston'),
+			'singular_name' => __('商品カテゴリー', 'aston'),
+			'menu_name' => __('商品カテゴリー表示', 'aston'),
+			'add_new' => __('新規追加', 'aston'),
+			'add_new_item' => __('カテゴリーを追加', 'aston'),
+			'edit_item' => __('カテゴリーを編集', 'aston'),
+			'new_item' => __('新規カテゴリー', 'aston'),
+			'view_item' => __('カテゴリーを見る', 'aston'),
+			'search_items' => __('カテゴリーを検索', 'aston'),
+			'not_found' => __('カテゴリーが見つかりません', 'aston'),
+			'not_found_in_trash' => __('ゴミ箱にカテゴリーが見つかりません', 'aston'),
+			'all_items' => __('すべてのカテゴリー', 'aston'),
 		),
-		'description' => __('トップページに表示する買取対象商品カテゴリー', 'twentynineteen'),
+		'description' => __('トップページに表示する買取対象商品カテゴリー', 'aston'),
 		'public' => false,
 		'publicly_queryable' => false,
 		'show_ui' => true,
@@ -565,20 +565,20 @@ function aston_register_cpt()
 	// Stores/Locations CPT (for front page display)
 	register_post_type('stores', array(
 		'labels' => array(
-			'name' => __('店舗情報', 'twentynineteen'),
-			'singular_name' => __('店舗', 'twentynineteen'),
-			'menu_name' => __('店舗情報', 'twentynineteen'),
-			'add_new' => __('新規追加', 'twentynineteen'),
-			'add_new_item' => __('店舗を追加', 'twentynineteen'),
-			'edit_item' => __('店舗を編集', 'twentynineteen'),
-			'new_item' => __('新規店舗', 'twentynineteen'),
-			'view_item' => __('店舗を見る', 'twentynineteen'),
-			'search_items' => __('店舗を検索', 'twentynineteen'),
-			'not_found' => __('店舗が見つかりません', 'twentynineteen'),
-			'not_found_in_trash' => __('ゴミ箱に店舗が見つかりません', 'twentynineteen'),
-			'all_items' => __('すべての店舗', 'twentynineteen'),
+			'name' => __('店舗情報', 'aston'),
+			'singular_name' => __('店舗', 'aston'),
+			'menu_name' => __('店舗情報', 'aston'),
+			'add_new' => __('新規追加', 'aston'),
+			'add_new_item' => __('店舗を追加', 'aston'),
+			'edit_item' => __('店舗を編集', 'aston'),
+			'new_item' => __('新規店舗', 'aston'),
+			'view_item' => __('店舗を見る', 'aston'),
+			'search_items' => __('店舗を検索', 'aston'),
+			'not_found' => __('店舗が見つかりません', 'aston'),
+			'not_found_in_trash' => __('ゴミ箱に店舗が見つかりません', 'aston'),
+			'all_items' => __('すべての店舗', 'aston'),
 		),
-		'description' => __('店舗・サービス拠点情報を管理', 'twentynineteen'),
+		'description' => __('店舗・サービス拠点情報を管理', 'aston'),
 		'public' => false,
 		'publicly_queryable' => false,
 		'show_ui' => true,
@@ -596,20 +596,20 @@ function aston_register_cpt()
 	// Antique Products CPT (for antiques page display)
 	register_post_type('antique_products', array(
 		'labels' => array(
-			'name' => __('アンティーク商品', 'twentynineteen'),
-			'singular_name' => __('アンティーク商品', 'twentynineteen'),
-			'menu_name' => __('アンティーク商品', 'twentynineteen'),
-			'add_new' => __('新規追加', 'twentynineteen'),
-			'add_new_item' => __('商品を追加', 'twentynineteen'),
-			'edit_item' => __('商品を編集', 'twentynineteen'),
-			'new_item' => __('新規商品', 'twentynineteen'),
-			'view_item' => __('商品を見る', 'twentynineteen'),
-			'search_items' => __('商品を検索', 'twentynineteen'),
-			'not_found' => __('商品が見つかりません', 'twentynineteen'),
-			'not_found_in_trash' => __('ゴミ箱に商品が見つかりません', 'twentynineteen'),
-			'all_items' => __('すべての商品', 'twentynineteen'),
+			'name' => __('アンティーク商品', 'aston'),
+			'singular_name' => __('アンティーク商品', 'aston'),
+			'menu_name' => __('アンティーク商品', 'aston'),
+			'add_new' => __('新規追加', 'aston'),
+			'add_new_item' => __('商品を追加', 'aston'),
+			'edit_item' => __('商品を編集', 'aston'),
+			'new_item' => __('新規商品', 'aston'),
+			'view_item' => __('商品を見る', 'aston'),
+			'search_items' => __('商品を検索', 'aston'),
+			'not_found' => __('商品が見つかりません', 'aston'),
+			'not_found_in_trash' => __('ゴミ箱に商品が見つかりません', 'aston'),
+			'all_items' => __('すべての商品', 'aston'),
 		),
-		'description' => __('アンティークページに表示する商品カテゴリー', 'twentynineteen'),
+		'description' => __('アンティークページに表示する商品カテゴリー', 'aston'),
 		'public' => false,
 		'publicly_queryable' => false,
 		'show_ui' => true,
@@ -627,20 +627,20 @@ function aston_register_cpt()
 	// Gallery Images CPT (for antiques page gallery)
 	register_post_type('gallery_images', array(
 		'labels' => array(
-			'name' => __('ギャラリー画像', 'twentynineteen'),
-			'singular_name' => __('ギャラリー画像', 'twentynineteen'),
-			'menu_name' => __('店内ギャラリー', 'twentynineteen'),
-			'add_new' => __('新規追加', 'twentynineteen'),
-			'add_new_item' => __('画像を追加', 'twentynineteen'),
-			'edit_item' => __('画像を編集', 'twentynineteen'),
-			'new_item' => __('新規画像', 'twentynineteen'),
-			'view_item' => __('画像を見る', 'twentynineteen'),
-			'search_items' => __('画像を検索', 'twentynineteen'),
-			'not_found' => __('画像が見つかりません', 'twentynineteen'),
-			'not_found_in_trash' => __('ゴミ箱に画像が見つかりません', 'twentynineteen'),
-			'all_items' => __('すべての画像', 'twentynineteen'),
+			'name' => __('ギャラリー画像', 'aston'),
+			'singular_name' => __('ギャラリー画像', 'aston'),
+			'menu_name' => __('店内ギャラリー', 'aston'),
+			'add_new' => __('新規追加', 'aston'),
+			'add_new_item' => __('画像を追加', 'aston'),
+			'edit_item' => __('画像を編集', 'aston'),
+			'new_item' => __('新規画像', 'aston'),
+			'view_item' => __('画像を見る', 'aston'),
+			'search_items' => __('画像を検索', 'aston'),
+			'not_found' => __('画像が見つかりません', 'aston'),
+			'not_found_in_trash' => __('ゴミ箱に画像が見つかりません', 'aston'),
+			'all_items' => __('すべての画像', 'aston'),
 		),
-		'description' => __('アンティークページ店内ギャラリーに表示する画像', 'twentynineteen'),
+		'description' => __('アンティークページ店内ギャラリーに表示する画像', 'aston'),
 		'public' => false,
 		'publicly_queryable' => false,
 		'show_ui' => true,
@@ -658,20 +658,20 @@ function aston_register_cpt()
 	// Brand Logos CPT (for antiques page brand slider)
 	register_post_type('brand_logos', array(
 		'labels' => array(
-			'name' => __('ブランドロゴ', 'twentynineteen'),
-			'singular_name' => __('ブランドロゴ', 'twentynineteen'),
-			'menu_name' => __('ブランドロゴ', 'twentynineteen'),
-			'add_new' => __('新規追加', 'twentynineteen'),
-			'add_new_item' => __('ロゴを追加', 'twentynineteen'),
-			'edit_item' => __('ロゴを編集', 'twentynineteen'),
-			'new_item' => __('新規ロゴ', 'twentynineteen'),
-			'view_item' => __('ロゴを見る', 'twentynineteen'),
-			'search_items' => __('ロゴを検索', 'twentynineteen'),
-			'not_found' => __('ロゴが見つかりません', 'twentynineteen'),
-			'not_found_in_trash' => __('ゴミ箱にロゴが見つかりません', 'twentynineteen'),
-			'all_items' => __('すべてのロゴ', 'twentynineteen'),
+			'name' => __('ブランドロゴ', 'aston'),
+			'singular_name' => __('ブランドロゴ', 'aston'),
+			'menu_name' => __('ブランドロゴ', 'aston'),
+			'add_new' => __('新規追加', 'aston'),
+			'add_new_item' => __('ロゴを追加', 'aston'),
+			'edit_item' => __('ロゴを編集', 'aston'),
+			'new_item' => __('新規ロゴ', 'aston'),
+			'view_item' => __('ロゴを見る', 'aston'),
+			'search_items' => __('ロゴを検索', 'aston'),
+			'not_found' => __('ロゴが見つかりません', 'aston'),
+			'not_found_in_trash' => __('ゴミ箱にロゴが見つかりません', 'aston'),
+			'all_items' => __('すべてのロゴ', 'aston'),
 		),
-		'description' => __('アンティークページブランドスライダーに表示するロゴ', 'twentynineteen'),
+		'description' => __('アンティークページブランドスライダーに表示するロゴ', 'aston'),
 		'public' => false,
 		'publicly_queryable' => false,
 		'show_ui' => true,
@@ -695,7 +695,7 @@ function aston_product_category_meta_boxes()
 {
 	add_meta_box(
 		'product_category_subtitle',
-		__('英語サブタイトル', 'twentynineteen'),
+		__('英語サブタイトル', 'aston'),
 		'aston_product_category_subtitle_callback',
 		'product_categories',
 		'normal',
@@ -704,7 +704,7 @@ function aston_product_category_meta_boxes()
 
 	add_meta_box(
 		'product_category_link',
-		__('リンクURL', 'twentynineteen'),
+		__('リンクURL', 'aston'),
 		'aston_product_category_link_callback',
 		'product_categories',
 		'normal',
@@ -720,7 +720,7 @@ function aston_store_meta_boxes()
 {
 	add_meta_box(
 		'store_link',
-		__('店舗詳細ページURL', 'twentynineteen'),
+		__('店舗詳細ページURL', 'aston'),
 		'aston_store_link_callback',
 		'stores',
 		'normal',
@@ -736,7 +736,7 @@ function aston_antique_product_meta_boxes()
 {
 	add_meta_box(
 		'antique_product_link',
-		__('商品リンクURL', 'twentynineteen'),
+		__('商品リンクURL', 'aston'),
 		'aston_antique_product_link_callback',
 		'antique_products',
 		'normal',
@@ -1012,7 +1012,7 @@ function get_pagination($query = null)
 	// Previous page
 	if ($current > 1) {
 		echo '<li class="blog-pagination__item blog-pagination__item--prev">';
-		echo '<a href="' . esc_url(get_pagenum_link($current - 1)) . '" aria-label="' . esc_attr__('前のページ', 'twentynineteen') . '">&laquo;</a>';
+		echo '<a href="' . esc_url(get_pagenum_link($current - 1)) . '" aria-label="' . esc_attr__('前のページ', 'aston') . '">&laquo;</a>';
 		echo '</li>';
 	}
 
@@ -1022,7 +1022,7 @@ function get_pagination($query = null)
 			echo '<li class="blog-pagination__item is-active" aria-current="page"><span>' . $i . '</span></li>';
 		} else {
 			echo '<li class="blog-pagination__item">';
-			echo '<a href="' . esc_url(get_pagenum_link($i)) . '" aria-label="' . sprintf(esc_attr__('ページ %s', 'twentynineteen'), $i) . '">' . $i . '</a>';
+			echo '<a href="' . esc_url(get_pagenum_link($i)) . '" aria-label="' . sprintf(esc_attr__('ページ %s', 'aston'), $i) . '">' . $i . '</a>';
 			echo '</li>';
 		}
 	}
@@ -1030,7 +1030,7 @@ function get_pagination($query = null)
 	// Next page
 	if ($current < $total) {
 		echo '<li class="blog-pagination__item blog-pagination__item--next">';
-		echo '<a href="' . esc_url(get_pagenum_link($current + 1)) . '" aria-label="' . esc_attr__('次のページ', 'twentynineteen') . '">&raquo;</a>';
+		echo '<a href="' . esc_url(get_pagenum_link($current + 1)) . '" aria-label="' . esc_attr__('次のページ', 'aston') . '">&raquo;</a>';
 		echo '</li>';
 	}
 
@@ -1060,7 +1060,7 @@ function aston_render_category_list($taxonomy = 'category', $title = 'Categories
 	echo '<ul class="card-box__list">';
 
 	if (empty($categories)) {
-		echo '<li class="card-box__item">' . esc_html__('カテゴリーが見つかりません', 'twentynineteen') . '</li>';
+		echo '<li class="card-box__item">' . esc_html__('カテゴリーが見つかりません', 'aston') . '</li>';
 	} else {
 		foreach ($categories as $category) {
 			echo '<li class="card-box__item">';

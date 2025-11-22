@@ -58,7 +58,7 @@ get_header();
 
             else :
                 ?>
-                <p><?php esc_html_e('記事が見つかりませんでした。', 'twentynineteen'); ?></p>
+                <p><?php esc_html_e('記事が見つかりませんでした。', 'aston'); ?></p>
             <?php endif; ?>
         </div>
         <div class="col-lg-4">
