@@ -21,6 +21,10 @@
   --btn-border-warning: #EFB46E;
 }
 
+a:hover {
+  text-decoration: none;
+}
+
 @media (max-width: 767.98px) {
   :root {
     --fs-body: 14px;

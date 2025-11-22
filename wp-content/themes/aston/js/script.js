@@ -112,4 +112,18 @@ jQuery(document).ready(function ($) {
             }
         });
     }
+
+    // Thêm vào file JS hoặc <script>
+    var heroSection = document.querySelector('.hero.lazyload');
+    if (heroSection) {
+        var bgUrl = heroSection.getAttribute('data-bg');
+        if (bgUrl) {
+            // Extract URL từ data-bg
+            var urlMatch = bgUrl.match(/url\(([^)]+)\)/);
+            if (urlMatch && urlMatch[1]) {
+                heroSection.style.backgroundImage = 'url(' + urlMatch[1] + ')';
+                heroSection.classList.remove('lazyload');
+            }
+        }
+    }
 });

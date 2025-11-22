@@ -187,7 +187,7 @@ get_header();
             <?php
 			$query = new WP_Query([
 				'post_type' => 'post',
-				'category_name' => 'aston-antiques',
+				'category_name' => '一押しアンティーク',
 				'posts_per_page' => 10,
 			]);
 
@@ -248,7 +248,7 @@ get_header();
 
     <!-- Button -->
     <div class="more-btn-wrap">
-        <a href="#" class="more-btn">ブログ一覧を見る
+        <a href="<?php echo esc_url(get_category_link(get_cat_ID('一押しアンティーク'))); ?>" class="more-btn">ブログ一覧を見る
             <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
                 <path
                     d="M15 7.5C15 3.358 11.642 0 7.5 0C3.358 0 -5.96046e-08 3.358 -5.96046e-08 7.5C-5.96046e-08 11.642 3.358 15 7.5 15C11.642 15 15 11.642 15 7.5ZM7.92375 8.78575H3.25V6.21425L7.92375 6.21425V3.5L11.75 7.5L7.92375 11.5L7.92375 8.78575Z"
@@ -322,7 +322,7 @@ get_header();
     <div class="">
         <h2 class="section-title onsite__title">出張買取</h2>
         <p class="onsite__lead">Astonでは出張買取を行なっております。多種多様な買取を行なっているので、まずはお気軽にお問い合わせください。</p>
-        <a class="btn-onsite" href="#">
+        <a class="btn-onsite" href="<?php echo esc_url(get_permalink(get_option('page_for_posts'))); ?>">
             <span>ブログ一覧を見る</span>
             <i class="ph ph-arrow-circle-right"></i>
         </a>

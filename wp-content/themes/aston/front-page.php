@@ -13,9 +13,10 @@ get_header();
 <section class="hero" <?php echo get_banner('home'); ?>>
     <div class="hero-content">
         <div class="mb-3">
-            <span class="hero__tooltip" data-customize-partial-id="aston_banner_tooltip_text"> <?php echo esc_html(get_theme_mod('aston_banner_tooltip_text')); ?></span>
+            <span class="hero__tooltip">どんなものでも無料査定！ 高価買取はアストンにお任せください！</span>
         </div>
-        <h1 class="headline" data-customize-partial-id="aston_banner_title"> <?php echo esc_html(get_theme_mod('aston_banner_title')); ?></h1>
+        <h1 class="headline"> <?php echo esc_html(get_theme_mod('aston_banner_title')); ?></h1>
+    <h1 class="headline">人とものをつなぐ企業アストン</h1>
 
         <div class="hero__buttons d-flex justify-content-center mb-4 flex-wrap">
             <div>
@@ -58,7 +59,7 @@ get_header();
                 <img src="<?php echo esc_url(get_template_directory_uri() . "/assets/images/hero-box-left.png"); ?>" alt="">
                 <div class="price-text">
                     <span class="top">査定費・出張費無料</span>
-                    <span class="bottom"><?php echo esc_html(get_theme_mod('aston_banner_feature_1')); ?></span>
+                    <span class="bottom">0円</span>
                 </div>
                 <img src="<?php echo esc_url(get_template_directory_uri() . "/assets/images/hero-box-right.png"); ?>" alt="" />
             </div>
@@ -67,7 +68,7 @@ get_header();
                 <img src="<?php echo esc_url(get_template_directory_uri() . "/assets/images/hero-box-left.png"); ?>" alt="">
                 <div class="price-text">
                     <span class="top">熟練の査定員多数！</span>
-                    <span class="bottom"><?php echo esc_html(get_theme_mod('aston_banner_feature_2')); ?></span>
+                    <span class="bottom">熟練スタッフが査定</span>
                 </div>
                 <img src="<?php echo esc_url(get_template_directory_uri() . "/assets/images/hero-box-right.png"); ?>" alt="" />
             </div>
@@ -76,7 +77,7 @@ get_header();
                 <img src="<?php echo esc_url(get_template_directory_uri() . "/assets/images/hero-box-left.png"); ?>" alt="">
                 <div class="price-text">
                     <span class="top">即日対応！</span>
-                    <span class="bottom"><?php echo esc_html(get_theme_mod('aston_banner_feature_3')); ?></span>
+                    <span class="bottom">迅速な対応</span>
                 </div>
                 <img src="<?php echo esc_url(get_template_directory_uri() . "/assets/images/hero-box-right.png"); ?>" alt="" />
             </div>
@@ -96,7 +97,7 @@ get_header();
             'post_type' => 'services',
             'posts_per_page' => 3,
             'orderby' => 'date',
-            'order' => 'DESC'
+            'order' => 'ASC'
         );
         $query = new WP_Query($args);
         if ($query->have_posts()):
@@ -224,77 +225,41 @@ get_header();
                 <span class="reason__title-num">3</span>つの理由
             </span>
         </h2>
-
         <div class="reason__grid">
             <!-- Card 1 -->
             <div class="reason__card">
                 <div class="reason__image-wrapper">
-                    <?php
-                    $reason_1_image_id = get_theme_mod('aston_reason_1_image');
-                    if ($reason_1_image_id) {
-                        echo wp_get_attachment_image($reason_1_image_id, 'medium', false, array('class' => 'reason__image', 'alt' => '高額買取'));
-                    } else {
-                        echo '<img src="' . esc_url(get_template_directory_uri() . "/assets/images/severce-card-1.png") . '" alt="高額買取" class="reason__image">';
-                    }
-                    ?>
+                    <img src="<?php echo esc_url(get_template_directory_uri() . "/assets/images/severce-card-1.png"); ?>" alt="高額買取" class="reason__image">
                     <span class="reason__badge">&nbsp;</span>
                     <span class="reason__index">1</span>
                 </div>
                 <div class="reason__content">
-                    <h3 class="reason__card-title">
-                        <?php echo wp_kses_post(get_theme_mod('aston_reason_1_title', '熟練査定員による<br><span class="color-main">高額買取</span>')); ?>
-                    </h3>
-                    <p class="reason__desc">
-                        <?php echo wp_kses_post(get_theme_mod('aston_reason_1_desc', '年間5,000件以上の買取実績を誇り、家電・家具の相場に精通しています。相場を<br>熟知した経験豊富な査定員による査定で、高<br>額買取を実現しています！')); ?>
-                    </p>
+                    <h3 class="reason__card-title">熟練査定員による<br><span class="color-main">高額買取</span></h3>
+                    <p class="reason__desc">年間5,000件以上の買取実績を誇り、家電・家具の相場に精通しています。相場を<br>熟知した経験豊富な査定員による査定で、高<br>額買取を実現しています！</p>
                 </div>
             </div>
-
             <!-- Card 2 -->
             <div class="reason__card">
                 <div class="reason__image-wrapper">
-                    <?php
-                    $reason_2_image_id = get_theme_mod('aston_reason_2_image');
-                    if ($reason_2_image_id) {
-                        echo wp_get_attachment_image($reason_2_image_id, 'medium', false, array('class' => 'reason__image', 'alt' => '正確な査定'));
-                    } else {
-                        echo '<img src="' . esc_url(get_template_directory_uri() . "/assets/images/reason-card-02.png") . '" alt="正確な査定" class="reason__image">';
-                    }
-                    ?>
+                    <img src="<?php echo esc_url(get_template_directory_uri() . "/assets/images/reason-card-02.png"); ?>" alt="正確な査定" class="reason__image">
                     <span class="reason__badge">&nbsp;</span>
                     <span class="reason__index">2</span>
                 </div>
                 <div class="reason__content">
-                    <h3 class="reason__card-title">
-                        <?php echo wp_kses_post(get_theme_mod('aston_reason_2_title', '自社データベースに<br>よる<span class="color-main">正確な査定</span>')); ?>
-                    </h3>
-                    <p class="reason__desc">
-                        <?php echo wp_kses_post(get_theme_mod('aston_reason_2_desc', '当社は独自のデータベースをベースに明確な<br>査定と丁寧な説明を行いデータに基づく査定<br>を行うことで、安心してご利用いただけるリ<br>サイクルショップを目指しています。')); ?>
-                    </p>
+                    <h3 class="reason__card-title">自社データベースに<br>よる<span class="color-main">正確な査定</span></h3>
+                    <p class="reason__desc">当社は独自のデータベースをベースに明確な<br>査定と丁寧な説明を行いデータに基づく査定<br>を行うことで、安心してご利用いただけるリ<br>サイクルショップを目指しています。</p>
                 </div>
             </div>
-
             <!-- Card 3 -->
             <div class="reason__card">
                 <div class="reason__image-wrapper">
-                    <?php
-                    $reason_3_image_id = get_theme_mod('aston_reason_3_image');
-                    if ($reason_3_image_id) {
-                        echo wp_get_attachment_image($reason_3_image_id, 'medium', false, array('class' => 'reason__image', 'alt' => '迅速な対応'));
-                    } else {
-                        echo '<img src="' . esc_url(get_template_directory_uri() . "/assets/images/reason-card-03.png") . '" alt="迅速な対応" class="reason__image">';
-                    }
-                    ?>
+                    <img src="<?php echo esc_url(get_template_directory_uri() . "/assets/images/reason-card-03.png"); ?>" alt="迅速な対応" class="reason__image">
                     <span class="reason__badge">&nbsp;</span>
                     <span class="reason__index">3</span>
                 </div>
                 <div class="reason__content">
-                    <h3 class="reason__card-title">
-                        <?php echo wp_kses_post(get_theme_mod('aston_reason_3_title', '貴重な時間を無駄に<br>しない<span class="color-main">迅速</span>な対応')); ?>
-                    </h3>
-                    <p class="reason__desc">
-                        <?php echo wp_kses_post(get_theme_mod('aston_reason_3_desc', 'お客様の貴重なお時間を無駄にせず、出張買<br>取や店舗への持ち込み時、その場で現金をお<br>渡しするサービスを提供しています。')); ?>
-                    </p>
+                    <h3 class="reason__card-title">貴重な時間を無駄に<br>しない<span class="color-main">迅速</span>な対応</h3>
+                    <p class="reason__desc">お客様の貴重なお時間を無駄にせず、出張買<br>取や店舗への持ち込み時、その場で現金をお<br>渡しするサービスを提供しています。</p>
                 </div>
             </div>
         </div>
@@ -513,6 +478,7 @@ get_header();
             ブログ一覧を見る <i class="ph ph-arrow-circle-right"></i>
         </a>
     </div>
+    <br/><br/>
 </section>
 
 <!-- SECTION FAQ -->

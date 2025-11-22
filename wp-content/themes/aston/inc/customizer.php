@@ -96,62 +96,6 @@ function aston_customize_register($wp_customize)
         'type' => 'url',
     ));
 
-    //Banner settings
-    $wp_customize->add_setting('aston_banner_tooltip_text', array(
-        'default' => 'どんなものでも無料査定！ 高価買取はアストンにお任せください！',
-        'transport' => 'postMessage',
-        'sanitize_callback' => 'sanitize_text_field',
-    ));
-    $wp_customize->add_control('aston_banner_tooltip_text', array(
-        'label' => __('ツールチップテキスト', 'aston'),
-        'section' => 'title_tagline',
-        'type' => 'text',
-    ));
-
-    $wp_customize->add_setting('aston_banner_title', array(
-        'default' => '人とものをつなぐ企業アストン',
-        'transport' => 'postMessage',
-        'sanitize_callback' => 'sanitize_text_field',
-    ));
-    $wp_customize->add_control('aston_banner_title', array(
-        'label' => __('タイトル', 'aston'),
-        'section' => 'title_tagline',
-        'type' => 'text',
-    ));
-
-    $wp_customize->add_setting('aston_banner_feature_1', array(
-        'default' => '0円',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_text_field',
-    ));
-    $wp_customize->add_control('aston_banner_feature_1', array(
-        'label' => __('査定費・出張費無料', 'aston'),
-        'section' => 'title_tagline',
-        'type' => 'text',
-    ));
-
-    $wp_customize->add_setting('aston_banner_feature_2', array(
-        'default' => '熟練スタッフが査定',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_text_field',
-    ));
-    $wp_customize->add_control('aston_banner_feature_2', array(
-        'label' => __('熟練の査定員多数', 'aston'),
-        'section' => 'title_tagline',
-        'type' => 'text',
-    ));
-
-    $wp_customize->add_setting('aston_banner_feature_3', array(
-        'default' => '迅速な対応',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_text_field',
-    ));
-    $wp_customize->add_control('aston_banner_feature_3', array(
-        'label' => __('即日対応', 'aston'),
-        'section' => 'title_tagline',
-        'type' => 'text',
-    ));
-
     $wp_customize->add_setting('aston_banner_image', array(
         'sanitize_callback' => 'absint',
     ));
@@ -162,109 +106,6 @@ function aston_customize_register($wp_customize)
         'mime_type' => 'image',
     )));
 
-    // ========== Reason Section (選ばれる3つの理由) ==========
-    $wp_customize->add_section('aston_reason_section', array(
-        'title' => __('選ばれる3つの理由', 'aston'),
-        'priority' => 35,
-        'description' => __('トップページの「選ばれる理由」セクションの設定', 'aston'),
-    ));
-
-    // Reason Card 1
-    $wp_customize->add_setting('aston_reason_1_title', array(
-        'default' => '熟練査定員による<br><span class="color-main">高額買取</span>',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'wp_kses_post',
-    ));
-    $wp_customize->add_control('aston_reason_1_title', array(
-        'label' => __('理由1 - タイトル', 'aston'),
-        'section' => 'aston_reason_section',
-        'type' => 'textarea',
-        'description' => __('HTMLタグ可（<br>, <span>等）', 'aston'),
-    ));
-
-    $wp_customize->add_setting('aston_reason_1_desc', array(
-        'default' => '年間5,000件以上の買取実績を誇り、家電・家具の相場に精通しています。相場を<br>熟知した経験豊富な査定員による査定で、高<br>額買取を実現しています！',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'wp_kses_post',
-    ));
-    $wp_customize->add_control('aston_reason_1_desc', array(
-        'label' => __('理由1 - 説明文', 'aston'),
-        'section' => 'aston_reason_section',
-        'type' => 'textarea',
-    ));
-
-    $wp_customize->add_setting('aston_reason_1_image', array(
-        'sanitize_callback' => 'absint',
-    ));
-    $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'aston_reason_1_image', array(
-        'label' => __('理由1 - 画像', 'aston'),
-        'section' => 'aston_reason_section',
-        'mime_type' => 'image',
-    )));
-
-    // Reason Card 2
-    $wp_customize->add_setting('aston_reason_2_title', array(
-        'default' => '自社データベースに<br>よる<span class="color-main">正確な査定</span>',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'wp_kses_post',
-    ));
-    $wp_customize->add_control('aston_reason_2_title', array(
-        'label' => __('理由2 - タイトル', 'aston'),
-        'section' => 'aston_reason_section',
-        'type' => 'textarea',
-    ));
-
-    $wp_customize->add_setting('aston_reason_2_desc', array(
-        'default' => '当社は独自のデータベースをベースに明確な<br>査定と丁寧な説明を行いデータに基づく査定<br>を行うことで、安心してご利用いただけるリ<br>サイクルショップを目指しています。',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'wp_kses_post',
-    ));
-    $wp_customize->add_control('aston_reason_2_desc', array(
-        'label' => __('理由2 - 説明文', 'aston'),
-        'section' => 'aston_reason_section',
-        'type' => 'textarea',
-    ));
-
-    $wp_customize->add_setting('aston_reason_2_image', array(
-        'sanitize_callback' => 'absint',
-    ));
-    $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'aston_reason_2_image', array(
-        'label' => __('理由2 - 画像', 'aston'),
-        'section' => 'aston_reason_section',
-        'mime_type' => 'image',
-    )));
-
-    // Reason Card 3
-    $wp_customize->add_setting('aston_reason_3_title', array(
-        'default' => '貴重な時間を無駄に<br>しない<span class="color-main">迅速</span>な対応',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'wp_kses_post',
-    ));
-    $wp_customize->add_control('aston_reason_3_title', array(
-        'label' => __('理由3 - タイトル', 'aston'),
-        'section' => 'aston_reason_section',
-        'type' => 'textarea',
-    ));
-
-    $wp_customize->add_setting('aston_reason_3_desc', array(
-        'default' => 'お客様の貴重なお時間を無駄にせず、出張買<br>取や店舗への持ち込み時、その場で現金をお<br>渡しするサービスを提供しています。',
-        'transport' => 'refresh',
-        'sanitize_callback' => 'wp_kses_post',
-    ));
-    $wp_customize->add_control('aston_reason_3_desc', array(
-        'label' => __('理由3 - 説明文', 'aston'),
-        'section' => 'aston_reason_section',
-        'type' => 'textarea',
-    ));
-
-    $wp_customize->add_setting('aston_reason_3_image', array(
-        'sanitize_callback' => 'absint',
-    ));
-    $wp_customize->add_control(new WP_Customize_Media_Control($wp_customize, 'aston_reason_3_image', array(
-        'label' => __('理由3 - 画像', 'aston'),
-        'section' => 'aston_reason_section',
-        'mime_type' => 'image',
-    )));
 
     //Footer settings
 
@@ -302,7 +143,6 @@ function aston_customize_register($wp_customize)
     $post_types = array(
         'home' => 'ホーム',
         'faqs' => 'よくある質問',
-        'jobs' => '求人情報',
         'posts' => 'ブログ'
     );
     
@@ -374,22 +214,6 @@ function aston_customize_selective_refresh($wp_customize) {
         'selector' => '[data-customize-partial-id="aston_business_hours"]',
         'render_callback' => function() {
             return esc_html(get_theme_mod('aston_business_hours', '【受付時間】10:00〜19:00'));
-        },
-    ));
-
-    // Selective refresh for banner title
-    $wp_customize->selective_refresh->add_partial('aston_banner_title', array(
-        'selector' => '[data-customize-partial-id="aston_banner_title"]',
-        'render_callback' => function() {
-            return esc_html(get_theme_mod('aston_banner_title', '人とものをつなぐ企業アストン'));
-        },
-    ));
-
-    // Selective refresh for banner tooltip
-    $wp_customize->selective_refresh->add_partial('aston_banner_tooltip_text', array(
-        'selector' => '[data-customize-partial-id="aston_banner_tooltip_text"]',
-        'render_callback' => function() {
-            return esc_html(get_theme_mod('aston_banner_tooltip_text', 'どんなものでも無料査定！ 高価買取はアストンにお任せください！'));
         },
     ));
 }
